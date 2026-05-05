@@ -1,0 +1,189 @@
+body {
+    font-family: Arial;
+
+    background: #FEF9E7;
+   
+
+    margin: 0;
+}
+
+
+.container {
+
+    width: 50%;
+
+    margin: auto;
+
+    padding: 10px;
+
+}
+
+h1 {
+
+    text-align: center;
+
+}
+
+.box {
+
+    background: #FEF9E7;
+  
+
+    padding: 10px;
+
+    margin: 15px 0;
+
+    border-radius: 5px;
+
+}
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+input, textarea {
+
+    margin: 5px 0;
+
+    padding: 5px;
+
+}
+
+textarea {
+
+    height: 30px;
+
+}
+
+button {
+
+    padding: 5px;
+
+    background: #D4AF37;
+
+    color: #FEF9E7;
+
+    border: none;
+
+    cursor: pointer;
+	
+
+}
+
+iframe {
+
+    width: 80%;
+
+    height: 200px;
+
+    border: none;
+
+}nav {
+    background-color:#203239;
+    color: #FEF9E7;
+    padding: 15px; 
+    text-align: center;
+}
+
+nav a {
+    color:#FEF9E7;
+    margin: 0 10px;
+	text-transform:uppercase;
+	font-size:0.85rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    transition: 0.3s; 
+}
+
+
+.museum-footer {
+    background-color: #203239;
+    color: #FEF9E7;           
+    padding: 20px 10% 10px;    
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;                 
+    border-bottom: 1px solid rgba(254, 249, 231, 0.2); 
+    padding-bottom: 15px;      
+}
+
+.footer-grid h3 {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;            
+    margin-bottom: 8px;       
+    font-size: 0.95rem;      
+}
+
+.footer-grid p, 
+.footer-accessibilty p,
+.footer-employment p {
+    font-size: 0.8rem;         
+    color: #FEF9E7;            
+    line-height: 1.8;          
+    margin: 3px 0;             
+}
+
+/* Links Styling */
+.footer-employment a,
+.social-links a {
+    color: #FEF9E7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.footer-employment a:hover,
+.social-links a:hover {
+    color: #D4AF37;            
+}
+
+.footer-employment {
+    margin-top: 10px;          
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                 
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.75rem;       
+    color: rgba(254, 249, 231, 0.6); 
+}
+body.dark-mode nav,
+ 
+body.dark-mode .museum-footer {
+    background-color: #000000; 
+}
+
+
+body.dark-mode {
+    background-color: #000000 !important; 
+    color: #D4AF37;                      
+}
+body.dark-mode .box, 
+body.dark-mode .container {
+    background-color: #1a1a1a;           
+    color: #D4AF37;
+    border: 1px solid #D4AF37;           
+}
+
+
+body.dark-mode .box, 
+
+body.dark-mode nav a{
+color:#D4AF37;}

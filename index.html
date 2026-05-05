@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style-home.css">
+  <head>
+      <meta charset="UTF-8">
+      <title>Home page</title>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main">
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+       <a href="price.html" class="nav-btn">book a ticket</a><!--george file name-->
+        <a href="search.html"> Search collections</a><!--haya file name-->
+        <a href="gallery.html">gallery</a><!--haya file name-->
+        <a href="about.html">About the museum</a><!--judy file name-->
+        <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
+        <a href="events.html">Events</a>
+        <a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
+        <a href="contact.html">Contact us</a><!--malak file name-->
+        <a href="logout.html">Log out</a>
+        <button id="theme-toggle">Change Theme</button>
+    </nav>
+    
+    <div class="head">
+        <h1>GRAND EGYPTIAN MUSEUM</h1>
+        <p>Journey through the history of Egypt</p>
+    </div>
+</header>
+<br>
+<footer class="museum-footer">
+    <div class="footer-grid">
+        <!-- Contact Info -->
+        <div class="footer-info">
+            <h3>VISIT US</h3>
+            <p>Tahrir Square, Cairo, Egypt</p>
+            <p>Email: swe2026@gmail.com.eg</p>
+            <p>Phone: +20 29969864</p>
+        <div class="footer-research">
+            <h3>RESEARCH</h3>
+            <p>conservation centre</p>
+            <p>confernce centre</p>
+            </div>
+        </div>
+        <div class="footer-hours"><!--working hours-->
+            <h3>HOURS</h3>
+            <p>Daily: 9:00 AM - 5:00 PM</p>
+            <p>Friday: 9:00 AM - 4:00 PM</p>
+            <div class="footer-employment">
+            <h3>WORK WITH US</h3>
+           <a href="about:blank" target="_blank"> Apply now</a><br>
+            <a href="about:blank" target="_blank">Interview schedules</a><br>
+            <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
+            </div>
+        </div> <!--end of w.hours div-->
+        <div class="footer-social">
+            <h3>FOLLOW US</h3>
+            <div class="social-links">
+        <a href="https://facebook.com" target="_blank">#Facebook</a>
+        <a href="https://instagram.com" target="_blank">#Instagram</a>
+        <a href="https://twitter.com" target="_blank">#Twitter</a>
+    </div>
+   <div class="footer-accessibilty">
+  <h3>ACCESSIBILITY</h3>
+  <p>MAP</p>
+  <p>Mixed-reality experience</p>
+  <p>Virtuial Reality view for the museum</p>
+   </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; since 1902.</p>
+    </div>
+</footer>
+        
+
+</div>
+</header>
+
+
+<script src="script.js"></script>
+<script>
+  
+    const themeBtn = document.getElementById('theme-toggle');
+    const bodyElement = document.body;
+    themeBtn.onclick = function() {
+        bodyElement.classList.toggle('light-mode');
+        if (bodyElement.classList.contains('light-mode')) {
+            themeBtn.textContent = "Switch to Dark";
+        } else {
+            themeBtn.textContent = "Switch to Light";
+        }
+    };
+</script>
+</body>
+</html>

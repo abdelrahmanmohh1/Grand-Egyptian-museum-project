@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title> Gallery </title>
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<nav class="navbar">
+        <a href="index.html">Home</a>  
+       <a href="price.html" class="nav-btn">book a ticket   </a><!--george file name-->
+        <a href="search.html">collections</a>     <!--haya file name-->
+        <a href="gallery.html">gallery</a>   <!--haya file name-->
+        <a href="about.html">About the museum</a>  <!--judy file name-->
+		<a href="venes part/Notepad++/updater/events.html">events</a><!--veness file name-->
+        <a href="login.html" class="nav-btn">Login</a>   <!--login veness file name-->
+        <a href="signup.html" class="nav-btn">Sign up</a>   <!--sign up veness file name-->
+        <a href="contact.html">contact us</a>   <!--malak file name-->
+		<div><button class="theme-toggle" id="themebtn" title="Toggle theme">switch theme</button></div>
+    </nav>
+	<section class="hero">
+	<div class="hero-eyebrow"> GEM-Giza </div>
+	<h1><em>Aritifact Gallery</em></h1>
+	<p class="hero-sub"> explore 5,000 of ancient Egyptian civilization </p>
+	</section>
+	<h2><em>Image Gallery</em></h2>
+
+<div class="gallery-container">
+
+<div class="gallery-item">
+  <a target="_blank" href="images/tut.jpeg">
+    <img src="images/tut.jpeg" alt="Mask" width="600" height="400">
+  </a>
+  <div class="desc">Mask of Tutankhamun</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="images/Falcon.png">
+    <img src="images/Falcon.png" alt="Statue" width="600" height="400">
+  </a>
+  <div class="desc">Statue of a falcon</div>
+</div>
+
+
+
+<div class="gallery-item">
+  <a target="_blank" href="images/statues.png">
+    <img src="images/statues.png" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">statue of God ptah,king Ramesses|| & Goddes Sekhmet</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/Scribe.png">
+    <img src="images/Scribe.png" alt="statues" width="600" height="400">
+  </a>
+  <div class="desc">Statue of the Scribe Mitri</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="images/boat.png">
+    <img src="images/boat.png" alt="Boat" width="600" height="400">
+  </a>
+  <div class="desc">Model of funerary boat of Ukhhotep</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="images/golden throne.png">
+    <img src="images/golden throne.png" alt="throne" width="600" height="400">
+  </a>
+  <div class="desc">Golden throne of Tutankhamun</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="images/child.png">
+    <img src="images/child.png" alt="mummy" width="600" height="400">
+  </a>
+  <div class="desc">Mummified child in Glided Cartonnage</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/seated.png">
+    <img src="images/seated.png" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">Seated Statue of Goddess Sekhmet</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/Hathor.png">
+    <img src="images/Hathor.png" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">Hathor Capital</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/Royal.png">
+    <img src="images/Royal.png" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">Royal Diadem</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/obelisk.jpeg">
+    <img src="images/obelisk.jpeg" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">Obelisk of King Ramesses ||</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/pyr.jpeg">
+    <img src="images/pyr.jpeg" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">pyramidion of an obelisk of Queen Hatshepsut</div>
+</div>
+<div class="gallery-item">
+  <a target="_blank" href="images/column.jpeg">
+    <img src="images/column.jpeg" alt="statue" width="600" height="400">
+  </a>
+  <div class="desc">Column of King Merenptah</div>
+</div>
+
+</div>
+
+
+	<div class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <button class="lb-close" id="lbClose">✕</button>
+        <img id="lbImg" src="" alt=""/>
+      </div>
+      <div class="lightbox-body">
+        <div class="lb-cat"   id="lbCat"></div>
+        <div class="lb-title" id="lbTitle"></div>
+        <div class="lb-desc"  id="lbDesc"></div>
+        <div class="lb-meta"  id="lbMeta"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="museum-footer">
+    <div class="footer-grid">
+        <!-- Contact Info -->
+        <div class="footer-info">
+            <h3>VISIT US</h3>
+            <p>Tahrir Square, Cairo, Egypt</p>
+            <p>Email: swe2026@gmail.com.eg</p>
+            <p>Phone: +20 29969864</p>
+        <div class="footer-research">
+            <h3>RESEARCH</h3>
+            <p>conservation centre</p>
+            <p>confernce centre</p>
+            </div>
+        </div>
+        <div class="footer-hours">
+            <h3>HOURS</h3>
+            <p>Daily: 9:00 AM - 5:00 PM</p>
+            <p>Friday: 9:00 AM - 4:00 PM</p>
+            <div class="footer-employment">
+            <h3>WORK WITH US</h3>
+           <a href="about:blank" target="_blank"> Apply now</a><br>
+            <a href="about:blank" target="_blank">Interview schedules</a><br>
+            <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
+            </div>
+        </div> 
+        <div class="footer-social">
+            <h3>FOLLOW US</h3>
+            <div class="social-links">
+        <a href="https://facebook.com" target="_blank">#Facebook</a>
+        <a href="https://instagram.com" target="_blank">#Instagram</a>
+        <a href="https://twitter.com" target="_blank">#Twitter</a>
+    </div>
+   <div class="footer-accessibilty">
+  <h3>ACCESSIBILITY</h3>
+  <p>MAP</p>
+  <p>Mixed-reality experience</p>
+  <p>Virtuial Reality view for the museum</p>
+   </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; since 1902.</p>
+    </div>
+        
+</div>
+  © 2024 Grand Egyptian Museum
+  </footer>
+  <script src="script-gallery.js" defer></script>
+  </body>
+  </html>
