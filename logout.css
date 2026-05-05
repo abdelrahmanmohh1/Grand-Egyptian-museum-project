@@ -1,0 +1,51 @@
+body{
+    background-color: #D4AF37;
+}
+.logout-page {
+    background-color: #FEF9E7; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+}
+
+.logout-card {
+    background-color: #203239;
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #1111; 
+}
+
+h2 {
+    color: #D4AF37;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.logout-btn {
+    background-color: #A68F68; 
+    color: #FEF9E7;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #D4AF37; 
+    color: #000;
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
