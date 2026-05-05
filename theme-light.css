@@ -1,0 +1,239 @@
+
+body {
+    background-color: #FEF9E7; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+nav {
+    background-color:#203239;
+    color: #FEF9E7;
+    padding: 15px; 
+    text-align: center;
+}
+
+nav a {
+    color:#FEF9E7;
+    margin: 0 10px;
+	text-transform:uppercase;
+	font-size:0.85rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #203239;
+    text-decoration: none; 
+    transform: scale(1.1); 
+}
+.heading{
+	margin: 2%; 
+    color: #203239;
+     
+    padding: 1px;
+}
+main h2 {
+    margin: 2%; 
+    color: #203239;
+    
+    padding: 1px;
+}
+#btn-pharaonic {
+    background-color: #A68F68;
+    color: #FEF9E7;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.museum-story-container{
+	display:flex;
+    flex-direction: row-reverse;
+    background-color: #F2E8CF; 
+    margin: 40px auto;
+    width: 90%;
+	max-height: 350px; 
+    overflow-y: auto;  
+	align-items: flex-start;
+}
+.story {
+    width: 60%; 
+    padding: 30px;
+	justify-content: center;
+	flex-direction: column;
+	overflow-y: auto;  
+	display:flex;
+	
+	
+    color: #333;
+}
+
+.story-image {
+    width: 40%; 
+    height 30px;
+	display:flex;
+}
+
+
+.story h3{
+	border-left: 5px solid #CD7F32; 
+    padding-left: 15px;
+		margin-top: 0;
+}
+.video-align {
+    margin-left: 0%; 
+    margin-top: 20px;
+	flex:1;
+}
+
+video {
+    border: 6px solid #8B7355;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+	
+	
+}
+.video-flex-container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 40px;               
+   margin-left: 10%;        
+    width: 85%;
+    margin-bottom: 50px;
+}
+.video-description {
+    flex: 1;              
+    color: #333;             
+}
+
+.video-description h3 {
+    margin-top: 0;
+    color: #203239;         
+}
+
+table {
+    width: 80%;
+    margin: 70px ;
+    border-collapse: collapse;
+    background-color: #F2E8CF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+th, td {
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #203239; 
+    color:#FEF9E7;
+}
+
+/* Transitions */
+tr:hover {
+    background-color: #F2E8CF;
+    transition: 0.3s; 
+}
+
+.map-container {
+    
+    display: inline-block;
+	display:flex;
+    align-items: flex-start; 
+    gap: 40px;              
+    margin-left: 3%;       
+    width: 85%;
+    margin-bottom: 50px;
+	padding: 15px;
+	
+
+}
+
+.map{
+   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+	
+}
+
+.map-text{
+	flex: 1;      
+	line-height:1.5;
+}
+
+.museum-footer {
+    background-color: #203239; 
+    color: #FEF9E7;            
+    padding: 20px 10% 10px;   
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;                 
+    border-bottom: 1px solid rgba(254, 249, 231, 0.2); 
+    padding-bottom: 15px;     
+}
+
+.footer-grid h3 {
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;            
+    margin-bottom: 8px;        
+    font-size: 0.95rem;        
+}
+
+.footer-grid p, 
+.footer-accessibilty p,
+.footer-employment p {
+    font-size: 0.8rem;     
+    color: #FEF9E7;            
+    line-height: 1.8;          
+    margin: 3px 0;             
+}
+
+
+.footer-employment a,
+.social-links a {
+    color: #FEF9E7;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.footer-employment a:hover,
+.social-links a:hover {
+    color: #D4AF37;           
+}
+
+.footer-employment {
+    margin-top: 10px;          
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;                  
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.75rem;        
+    color: rgba(254, 249, 231, 0.6); 
+}
+
+
+.map-text {
+    flex: 1;
+    color: #203239;            
+}
