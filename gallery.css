@@ -36,12 +36,14 @@ nav a {
 }
 .hero {
     text-align: center;
-    padding: 90px 30px;
+    padding: 120px 30px; 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('/images/images/background.jpeg'); 
+                url('images/images/background.jpeg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: white;
+    min-height: 300px; /* Ensures the background has space to show */
 }
 .hero-eyebrow {
     letter-spacing: 4px;
