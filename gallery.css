@@ -41,7 +41,7 @@ nav a {
                 url('images/images/background.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+   
     color: white;
     min-height: 300px; /* Ensures the background has space to show */
 }
