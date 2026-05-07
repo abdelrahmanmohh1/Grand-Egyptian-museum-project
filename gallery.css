@@ -2,6 +2,7 @@
 body {
     margin: 0;
     background-color:#FEF9E7;
+	display:flex;
 }
 nav {
     background-color:#203239;
