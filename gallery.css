@@ -14,11 +14,8 @@ body {
 nav {
     background-color: #203239;
     color: #FEF9E7;
-    padding: 15px 40px; 
-    display: flex;       
-    justify-content: center; 
-    align-items: center;
-    position: relative; 
+    padding: 15px;   
+    text-align: center; 
 }
 
 nav a {
@@ -28,6 +25,7 @@ nav a {
     font-size: 0.85rem;
     text-decoration: none;
     transition: 0.3s;
+	display:inline-block;
 }
 nav a:hover {
     color: #c5a059;
