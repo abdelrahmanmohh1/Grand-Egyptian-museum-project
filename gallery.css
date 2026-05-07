@@ -28,8 +28,11 @@ nav a {
     display: inline-block; 
     transition: 0.3s; 
 }
-.navbar a:hover {
-    color: var(--gold);
+
+nav a:hover {
+    color: #FEF9E7;
+    text-decoration: none; 
+    transform: scale(1.1); 
 }
 .hero {
     text-align: center;
