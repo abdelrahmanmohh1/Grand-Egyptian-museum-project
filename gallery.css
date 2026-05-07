@@ -1,16 +1,26 @@
+
+:root {
+    --gold: #c5a059;
+    --dark-bg: #121212;
+    --light-bg: #f4f1ea;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
 body {
     margin: 0;
-    background-color: #FEF9E7; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FEF9E7;
+    line-height: 1.6;
 }
-
 nav {
     background-color: #203239;
     color: #FEF9E7;
-    padding: 15px 40px;
+    padding: 15px 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    position: relative; 
+    position: relative;      
+    width: 100%;
 }
 
 nav a {
@@ -20,12 +30,11 @@ nav a {
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #c5a059;
+    color: var(--gold);
     transform: scale(1.1);
 }
 
@@ -33,15 +42,20 @@ nav a:hover {
     background-color: #A68F68;
     color: #FEF9E7;
     border: none;
-    padding: 5px 15px;
-    border-radius: 15px; 
+    padding: 6px 18px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
     position: absolute;
-    right: 20px;
+    right: 30px; 
+    transition: 0.3s;
 }
 
-
+#themebtn:hover {
+    background-color: #c5a059;
+}
 .hero {
     text-align: center;
    padding: 90 px 30 px;
