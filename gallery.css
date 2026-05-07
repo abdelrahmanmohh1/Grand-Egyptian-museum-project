@@ -4,7 +4,7 @@ body {
     background-color:#FEF9E7;
 	display:flex;
 }
-nav {
+ nav {
     background-color:#203239;
     color: #FEF9E7;
     padding: 15px; 
@@ -20,17 +20,8 @@ nav a {
     font-weight: bold;
     display: inline-block; 
     transition: 0.3s; 
-}
+} 
 
-nav a:hover {
-    color: #FEF9E7;
-    text-decoration: none; 
-    transform: scale(1.1); 
-}
-nav a:hover {
-    color: #c5a059;
-    transform: none; 
-}
 .hero {
     text-align: center;
    padding: 90 px 30 px;
