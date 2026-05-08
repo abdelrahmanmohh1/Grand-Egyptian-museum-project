@@ -1,477 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Ticket Pricing</title>
+    <meta charset="UTF-8">
+    <title>Ticket Pricing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        /* Base Dark Theme (Default) */
+        body {
+            font-family: 'Cinzel', serif;
+            background: #111;
+            color: #fff;
+            transition: 0.4s;
+            min-height: 100vh;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+        /* Nav Bar - Centered and Sticky-ready */
+        nav {
+            background-color: #203239;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+        }
 
-body{
-    font-family:'Cinzel', serif;
-    background:url("https://images.unsplash.com/photo-1594736797933-d0a9ba1c4e56") center/cover no-repeat;
-    color:#fff;
-    transition:0.4s;
-}
-body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.88);
-    z-index:-1;
-    transition:0.4s;
-}
-nav {
-    background-color:#203239;
-    color: #FEF9E7;
-    padding: 15px; 
-    text-align: center;
-}
+        nav a {
+            color: #FEF9E7;
+            margin: 0 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
 
-nav a {
-    color:#FEF9E7;
-    margin: 0 10px;
-	text-transform:uppercase;
-	font-size:0.85rem;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block; 
-    transition: 0.3s; 
-}
-nav a:hover{color:#d4af37;}
+        nav a:hover { color: #d4af37; transform: scale(1.1); }
 
+        /* Theme Toggle Link specific style */
+        .theme-toggle {
+            background: #A68F68;
+            padding: 5px 12px;
+            border-radius: 15px;
+            color: #fff !important;
+        }
 
-.hero-img{
-    position:relative;
-}
+        /* Hero Image */
+        .hero-img img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
 
-.hero-img img{
-    width:100%;
-    height:650px;
-    object-fit:cover;
-    display:block;
-}
+        .hero { text-align: center; padding: 60px 20px; }
+        .hero h1 { font-size: 3.5rem; letter-spacing: 6px; }
+        .hero p { color: #d4af37; letter-spacing: 4px; margin-top: 10px; }
+        .ankh { font-size: 28px; color: #d4af37; }
+        .line { width: 150px; height: 1px; background: #d4af37; margin: 15px auto; }
 
+        /* Tables and Content */
+        .section-title { text-align: center; color: #d4af37; margin: 40px 0; }
+        .table-box { width: 85%; margin: auto; border: 1px solid #d4af37; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 18px; border-bottom: 1px solid #d4af37; text-align: center; }
+        th { color: #d4af37; }
 
+        .cards { display: flex; justify-content: center; gap: 30px; margin: 60px 20px; flex-wrap: wrap; }
+        .card { width: 300px; border: 1px solid #d4af37; padding: 25px; transition: 0.3s; }
+        .card:hover { background: rgba(212,175,55,0.1); transform: translateY(-5px); }
 
-.hero{
-    text-align:center;
-    padding:80px 20px 40px;
-}
-.hero h1{
-    font-size:65px;
-    letter-spacing:6px;
-}
-.hero p{
-    color:#d4af37;
-    margin-top:10px;
-    letter-spacing:4px;
-}
+        .btn {
+            display: block; text-align: center; padding: 10px; margin-top: 15px;
+            border: 1px solid #d4af37; color: #d4af37; text-decoration: none;
+        }
+        .btn:hover { background: #d4af37; color: #000; }
 
-.ankh{
-    text-align:center;
-    font-size:28px;
-    color:#d4af37;
-    margin:10px 0;
-}
+        /* Footer Styles */
+        .museum-footer {
+            background-color: #203239;
+            color: #FEF9E7;
+            padding: 60px 10% 20px;
+            margin-top: 80px;
+        }
 
-.line{
-    width:200px;
-    height:1px;
-    background:#d4af37;
-    margin:15px auto;
-}
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+        }
 
-.section-title{
-    text-align:center;
-    color:#d4af37;
-    letter-spacing:3px;
-    margin:20px 0;
-}
+        .footer-grid h3 { color: #d4af37; margin-bottom: 15px; font-size: 1rem; }
+        .footer-grid p, .footer-grid a { color: #ccc; font-size: 0.85rem; text-decoration: none; }
+        .social-links a { display: block; margin-bottom: 5px; }
+        .footer-bottom { text-align: center; padding-top: 20px; font-size: 0.8rem; color: #888; }
 
-
-.table-box{
-    width:85%;
-    margin:auto;
-    border:1px solid #d4af37;
-}
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-th,td{
-    padding:18px;
-    border-bottom:1px solid #d4af37;
-    text-align:center;
-}
-th{color:#d4af37;}
-td i{color:#d4af37;margin-right:8px;}
-
-
-.cards{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin:60px;
-    flex-wrap:wrap;
-}
-.card{
-    width:300px;
-    border:1px solid #d4af37;
-    padding:25px;
-    transition:0.3s;
-}
-.card:hover{
-    background:rgba(212,175,55,0.1);
-    transform:translateY(-5px);
-}
-.card h3{
-    color:#d4af37;
-    text-align:center;
-    margin-bottom:20px;
-}
-.card p{margin:8px 0;}
-
-.btn{
-    display:block;
-    text-align:center;
-    padding:10px;
-    margin-top:15px;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    text-decoration:none;
-}
-.btn:hover{
-    background:#d4af37;
-    color:#000;
-}
-
-.faq-item{
-    border-bottom:1px solid #d4af37;
-    padding:10px 0;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
-}
-.faq-answer{
-    display:none;
-    font-size:14px;
-    color:#ccc;
-    margin-top:5px;
-}
-
-
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:1px solid #d4af37;
-    margin-top:40px;
-}
-
-
-.light-mode{
-    background:#FEF9E7;
-    color:#203239;
-}
-
-.light-mode::before{
-    background:rgba(255,255,255,0.2);
-}
-
-.light-mode,
-.light-mode p,
-.light-mode span,
-.light-mode td,
-.light-mode th,
-.light-mode h1,
-.light-mode h2,
-.light-mode h3{
-    color:#203239;
-}
-
-.light-mode nav{
-    background:#203239;
-}
-.light-mode nav a{
-    color:#F2E8CF;
-}
-.light-mode nav a:hover{
-    color:#fff;
-}
-
-.light-mode .table-box,
-.light-mode .card,
-.light-mode footer{
-    border-color:#203239;
-}
-
-.light-mode .btn{
-    border-color:#203239;
-    color:#203239;
-}
-.light-mode .btn:hover{
-    background:#203239;
-    color:#FEF9E7;
-}
-
-.light-mode .faq-answer{
-    color:#203239;
-}
-.museum-footer {
-    background-color: #111;
-    color: white;
-    padding: 40px 10%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.footer-grid { 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
-}
-
-.footer-grid h3 { 
-    font-family: 'Cinzel', serif;
-    color: #D4AF37;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.footer-grid p { 
-    font-size: 0.85rem;
-    color: #bbb;
-    line-height: 1.6;
-}
-.footer-accessibilty{
-flex: 1;    
-}
-.footer-accessibilty p {
-    font-size: 12px;
-    color: #ccc;
-    margin: 5px 0;
-}
-
-.footer-employment {
-    margin-top: 30px; 
-}
-.footer-employment a{
-color: #ccc; 
-    font-weight: bold;
-    text-decoration: none;
-     margin: 5px 0;
-  
-}
-
-.footer-employment p {
-    font-size: 11px;
-    margin: 5px 0;
-}
-
-
-
-.footer-social {
-    display: flex;
-    flex-direction: column;
-}
-
-
-.social-links {
-    display: flex;
-    flex-direction: column; 
-    gap: 6px;              
-}
-
-.social-links a {
-    text-decoration: none;
-    font-size: 0.85rem;     
-    color: #bbb;          
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;     
-    font-weight: normal;    
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #D4AF37; 
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 1rem;
-    color: #5f5f5f;
-}
-</style>
+        /* LIGHT MODE OVERRIDES */
+        body.light-mode { background: #FEF9E7; color: #203239; }
+        body.light-mode .hero h1, body.light-mode td, body.light-mode th { color: #203239; }
+        body.light-mode .table-box, body.light-mode .card { border-color: #203239; }
+        body.light-mode .museum-footer { background-color: #1a2a30; }
+    </style>
 </head>
 
-<body class="light-mode">
+<body class="light-mode"> <nav>
+        <a href="index.html">HOME</a>
+        <a href="price.html">BOOK A TICKET</a>
+        <a href="search.html">COLLECTIONS</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="about.html">ABOUT THE MUSEUM</a>
+        <a href="events.html">EVENTS</a>
+        <a href="login.html">LOGIN</a>
+        <a href="signup.html">SIGN UP</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="#" onclick="toggleTheme()" class="theme-toggle">Switch Theme</a>
+    </nav>
 
+    <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0a9ba1c4e56?auto=format&fit=crop&w=1600&q=80" alt="Museum">
+    </div>
 
-<div class="hero-img">
+    <div class="hero">
+        <div class="ankh">☥</div>
+        <h1>TICKET PRICING</h1>
+        <div class="line"></div>
+        <p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
+    </div>
 
-<nav>
-<a href="index.html">HOME</a>
-<a href="price.html">BOOK A TICKET</a>
-<a href="search.html">COLLECTIONS</a>
-<a href="gallery.html">GALLERY</a>
-<a href="about.html">ABOUT THE MUSEUM</a>
- <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
-<li><a href="events.html">Events</a></li>
-<a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
-<a href="contact.html">CONTACT US</a>
-<a href="#" onclick="toggleTheme()">Switch Theme</a>
-</nav>
+    <h2 class="section-title">TICKET TYPES & PRICING</h2>
 
-<img src="img.png">
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>TICKET TYPE</th>
+                    <th>PRICE (EGP)</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fa-solid fa-user"></i> ADULT</td>
+                    <td>200</td>
+                    <td>Full access to all exhibits and attractions</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td>
+                    <td>100</td>
+                    <td>Discounted entry with valid student ID</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-child"></i> CHILD</td>
+                    <td>50</td>
+                    <td>For children under 12 years old</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-</div>
+    <div class="cards">
+        <div class="card">
+            <h3>INFO</h3>
+            <p><i class="fa-solid fa-clock"></i> 9:00 AM - 5:00 PM</p>
+            <p><i class="fa-solid fa-location-dot"></i> Tahrir Square, Cairo</p>
+            <p><i class="fa-solid fa-envelope"></i> info@gem.gov.eg</p>
+        </div>
 
-<div class="hero">
-<div class="ankh">☥</div>
-<h1>TICKET PRICING</h1>
-<div class="line"></div>
-<p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
-</div>
+        <div class="card" style="text-align:center;">
+            <h3>BOOKING</h3>
+            <i class="fa-solid fa-ticket fa-2x" style="color:#d4af37; margin: 10px 0;"></i>
+            <p>Skip the line and enjoy a seamless experience.</p>
+            <a href="#" class="btn">BOOK NOW</a>
+        </div>
+    </div>
 
+    <footer class="museum-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>VISIT US</h3>
+                <p>Tahrir Square, Cairo, Egypt</p>
+                <p>Phone: +20 29969864</p>
+            </div>
+            <div>
+                <h3>HOURS</h3>
+                <p>Daily: 9:00 AM - 5:00 PM</p>
+                <p>Friday: 9:00 AM - 4:00 PM</p>
+            </div>
+            <div class="social-links">
+                <h3>FOLLOW</h3>
+                <a href="#">#Facebook</a>
+                <a href="#">#Instagram</a>
+                <a href="#">#Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Egyptian Museum. Since 1902.</p>
+        </div>
+    </footer>
 
-<h2 class="section-title">TICKET TYPES & PRICING</h2>
-
-<div class="table-box">
-<table>
-<tr>
-<th>TICKET TYPE</th>
-<th>PRICE</th>
-<th>DESCRIPTION</th>
-</tr>
-
-<tr>
-<td><i class="fa-solid fa-user"></i> ADULT</td>
-<td>200</td>
-<td>Full access to all exhibits and attractions</td>
-</tr>
-
-<tr>
-<td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td>
-<td>100</td>
-<td>Discounted entry with valid student ID</td>
-</tr>
-
-<tr>
-<td><i class="fa-solid fa-child"></i> CHILD</td>
-<td>50</td>
-<td>For children under 12 years old</td>
-</tr>
-</table>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>MUSEUM HOURS & INFO</h3>
-<p><i class="fa-solid fa-clock"></i> 9:00 AM - 5:00 PM</p>
-<p><i class="fa-solid fa-location-dot"></i> Tahrir Square, Cairo</p>
-<p><i class="fa-solid fa-envelope"></i> info@mail.com</p>
-<p><i class="fa-solid fa-phone"></i> +20 123456789</p>
-</div>
-
-<div class="card" style="text-align:center;">
-<h3>BOOK YOUR TICKET</h3>
-<i class="fa-solid fa-ticket fa-2x" style="color:#d4af37;"></i>
-<p>Skip the line and enjoy a seamless experience.</p>
-<a href="#" class="btn">BOOK NOW</a>
-</div>
-
-<div class="card">
-<h3>FAQ</h3>
-
-<div onclick="toggleFAQ(this)">
-<div class="faq-item">
-<span>Can I refund my ticket?</span>
-<span>+</span>
-</div>
-<div class="faq-answer">Yes, within 24 hours.</div>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-☥ © 2026 Egyptian Museum. All Rights Reserved.
-</footer>
-    <div class="footer-grid">
-        <!-- Contact Info -->
-        <div class="footer-info">
-            <h3>VISIT US</h3>
-            <p>Tahrir Square, Cairo, Egypt</p>
-            <p>Email: swe2026@gmail.com.eg</p>
-            <p>Phone: +20 29969864</p>
-        <div class="footer-research">
-            <h3>RESEARCH</h3>
-            <p>conservation centre</p>
-            <p>confernce centre</p>
-            </div>
-        </div>
-        <div class="footer-hours">
-            <h3>HOURS</h3>
-            <p>Daily: 9:00 AM - 5:00 PM</p>
-            <p>Friday: 9:00 AM - 4:00 PM</p>
-            <div class="footer-employment">
-            <h3>WORK WITH US</h3>
-           <a href="about:blank" target="_blank"> Apply now</a><br>
-            <a href="about:blank" target="_blank">Interview schedules</a><br>
-            <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
-            </div>
-        </div>
-        <div class="footer-social">
-            <h3>FOLLOW US</h3>
-            <div class="social-links">
-        <a href="https://facebook.com" target="_blank">#Facebook</a>
-        <a href="https://instagram.com" target="_blank">#Instagram</a>
-        <a href="https://twitter.com" target="_blank">#Twitter</a>
-    </div>
-   <div class="footer-accessibilty">
-  <h3>ACCESSIBILITY</h3>
-  <p>MAP</p>
-  <p>Mixed-reality experience</p>
-  <p>Virtuial Reality view for the museum</p>
-   </div>
-        </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; since 1902.</p>
-    </div>
-</footer>
-        
-
-</div>
-
-<script>
-function toggleFAQ(el){
-    let ans = el.querySelector(".faq-answer");
-    let sign = el.querySelector(".faq-item span:last-child");
-
-    if(ans.style.display==="block"){
-        ans.style.display="none";
-        sign.innerText="+";
-    }else{
-        ans.style.display="block";
-        sign.innerText="-";
-    }
-}
-
-function toggleTheme(){
-    document.body.classList.toggle("light-mode");
-}
-</script>
-
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
 </body>
 </html>
