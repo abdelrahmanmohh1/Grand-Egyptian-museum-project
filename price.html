@@ -11,170 +11,175 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family:'Cinzel', serif;
-    background:url("https://images.unsplash.com/photo-1594736797933-d0a9ba1c4e56") center/cover no-repeat;
-    color:#fff;
-    transition:0.4s;
+    font-family:'Cinzel', serif;
+    background:url("https://images.unsplash.com/photo-1594736797933-d0a9ba1c4e56") center/cover no-repeat;
+    color:#fff;
+    transition:0.4s;
 }
 body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.88);
-    z-index:-1;
-    transition:0.4s;
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.88);
+    z-index:-1;
+    transition:0.4s;
 }
 nav {
-    background-color:#203239;
-    color: #FEF9E7;
-    padding: 15px; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color:#203239;
+    color: #FEF9E7;
+    padding: 15px; 
+    text-align: center;
 }
 
 nav a {
-    color:#FEF9E7;
-    margin: 0 10px;
-    text-transform:uppercase;
-    font-size:0.85rem;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block; 
-    transition: 0.3s; 
+    color:#FEF9E7;
+    margin: 0 10px;
+	text-transform:uppercase;
+	font-size:0.85rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    transition: 0.3s; 
 }
-nav a:hover{
-    color:#FEF9E7;
-     text-decoration: none; 
-    transform: scale(1.1); 
-}
+nav a:hover{color:#d4af37;}
+
+
 .hero-img{
-    position:relative;
+    position:relative;
 }
 
 .hero-img img{
-    width:100%;
-    height:650px;
-    object-fit:cover;
-    display:block;
+    width:100%;
+    height:650px;
+    object-fit:cover;
+    display:block;
 }
 
+
+
 .hero{
-    text-align:center;
-    padding:80px 20px 40px;
+    text-align:center;
+    padding:80px 20px 40px;
 }
 .hero h1{
-    font-size:65px;
-    letter-spacing:6px;
+    font-size:65px;
+    letter-spacing:6px;
 }
 .hero p{
-    color:#d4af37;
-    margin-top:10px;
-    letter-spacing:4px;
+    color:#d4af37;
+    margin-top:10px;
+    letter-spacing:4px;
 }
 
 .ankh{
-    text-align:center;
-    font-size:28px;
-    color:#d4af37;
-    margin:10px 0;
+    text-align:center;
+    font-size:28px;
+    color:#d4af37;
+    margin:10px 0;
 }
 
 .line{
-    width:200px;
-    height:1px;
-    background:#d4af37;
-    margin:15px auto;
+    width:200px;
+    height:1px;
+    background:#d4af37;
+    margin:15px auto;
 }
 
 .section-title{
-    text-align:center;
-    color:#d4af37;
-    letter-spacing:3px;
-    margin:20px 0;
+    text-align:center;
+    color:#d4af37;
+    letter-spacing:3px;
+    margin:20px 0;
 }
 
+
 .table-box{
-    width:85%;
-    margin:auto;
-    border:1px solid #d4af37;
+    width:85%;
+    margin:auto;
+    border:1px solid #d4af37;
 }
 table{
-    width:100%;
-    border-collapse:collapse;
+    width:100%;
+    border-collapse:collapse;
 }
 th,td{
-    padding:18px;
-    border-bottom:1px solid #d4af37;
-    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #d4af37;
+    text-align:center;
 }
 th{color:#d4af37;}
 td i{color:#d4af37;margin-right:8px;}
 
+
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    margin:60px;
-    flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:60px;
+    flex-wrap:wrap;
 }
 .card{
-    width:300px;
-    border:1px solid #d4af37;
-    padding:25px;
-    transition:0.3s;
+    width:300px;
+    border:1px solid #d4af37;
+    padding:25px;
+    transition:0.3s;
 }
 .card:hover{
-    background:rgba(212,175,55,0.1);
-    transform:translateY(-5px);
+    background:rgba(212,175,55,0.1);
+    transform:translateY(-5px);
 }
 .card h3{
-    color:#d4af37;
-    text-align:center;
-    margin-bottom:20px;
+    color:#d4af37;
+    text-align:center;
+    margin-bottom:20px;
 }
 .card p{margin:8px 0;}
 
 .btn{
-    background-color:#A68F68;
-    border:none;
-    text-align:center;
-    padding:5px 15px;
-    margin-top:15px;
-    color:#FEF9E7;
-    cursor:pointer;
-    font-weight:bold;
-    border-radius:15px;
-    text-decoration:none;
+    display:block;
+    text-align:center;
+    padding:10px;
+    margin-top:15px;
+    border:1px solid #d4af37;
+    color:#d4af37;
+    text-decoration:none;
 }
 .btn:hover{
-    background:#d4af37;
-    color:#000;
+    background:#d4af37;
+    color:#000;
 }
 
 .faq-item{
-    border-bottom:1px solid #d4af37;
-    padding:10px 0;
-    cursor:pointer;
-    display:flex;
-    justify-content:space-between;
+    border-bottom:1px solid #d4af37;
+    padding:10px 0;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
 }
 .faq-answer{
-    display:none;
-    font-size:14px;
-    color:#ccc;
-    margin-top:5px;
+    display:none;
+    font-size:14px;
+    color:#ccc;
+    margin-top:5px;
 }
 
+
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid #d4af37;
+    margin-top:40px;
+}
+
+
 .light-mode{
-    background:#FEF9E7;
-    color:#203239;
+    background:#FEF9E7;
+    color:#203239;
 }
 
 .light-mode::before{
-    background:rgba(255,255,255,0.2);
+    background:rgba(255,255,255,0.2);
 }
 
 .light-mode,
@@ -185,139 +190,143 @@ td i{color:#d4af37;margin-right:8px;}
 .light-mode h1,
 .light-mode h2,
 .light-mode h3{
-    color:#203239;
+    color:#203239;
 }
 
 .light-mode nav{
-    background:#203239;
+    background:#203239;
 }
 .light-mode nav a{
-    color:#F2E8CF;
+    color:#F2E8CF;
 }
 .light-mode nav a:hover{
-    color:#fff;
+    color:#fff;
 }
 
 .light-mode .table-box,
 .light-mode .card,
 .light-mode footer{
-    border-color:#203239;
+    border-color:#203239;
 }
 
 .light-mode .btn{
-    border-color:#203239;
-    color:#203239;
+    border-color:#203239;
+    color:#203239;
 }
 .light-mode .btn:hover{
-    background:#203239;
-    color:#FEF9E7;
+    background:#203239;
+    color:#FEF9E7;
 }
 
 .light-mode .faq-answer{
-    color:#203239;
+    color:#203239;
 }
 .museum-footer {
-    background-color: #111;
-    color: white;
-    padding: 40px 10%;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    color: white;
+    padding: 40px 10%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.footer-grid { 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 30px;
+.footer-grid { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
 }
 
-.footer-grid h3 { 
-    font-family: 'Cinzel', serif;
-    color: #D4AF37;
-    margin-bottom: 15px;
-    font-size: 1rem;
+.footer-grid h3 { 
+    font-family: 'Cinzel', serif;
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-size: 1rem;
 }
 
-.footer-grid p { 
-    font-size: 0.85rem;
-    color: #bbb;
-    line-height: 1.6;
+.footer-grid p { 
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.6;
 }
 .footer-accessibilty{
-flex: 1;    
+flex: 1;    
 }
 .footer-accessibilty p {
-    font-size: 12px;
-    color: #ccc;
-    margin: 5px 0;
+    font-size: 12px;
+    color: #ccc;
+    margin: 5px 0;
 }
 
 .footer-employment {
-    margin-top: 30px; 
+    margin-top: 30px; 
 }
 .footer-employment a{
-color: #ccc; 
-    font-weight: bold;
-    text-decoration: none;
-     margin: 5px 0;
-  
+color: #ccc; 
+    font-weight: bold;
+    text-decoration: none;
+     margin: 5px 0;
+  
 }
 
 .footer-employment p {
-    font-size: 11px;
-    margin: 5px 0;
+    font-size: 11px;
+    margin: 5px 0;
 }
+
+
 
 .footer-social {
-    display: flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
+
 .social-links {
-    display: flex;
-    flex-direction: column; 
-    gap: 6px;              
+    display: flex;
+    flex-direction: column; 
+    gap: 6px;              
 }
 
 .social-links a {
-    text-decoration: none;
-    font-size: 0.85rem;     
-    color: #bbb;          
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;     
-    font-weight: normal;    
-    transition: 0.3s;
+    text-decoration: none;
+    font-size: 0.85rem;     
+    color: #bbb;          
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;     
+    font-weight: normal;    
+    transition: 0.3s;
 }
 
 .social-links a:hover {
-    color: #D4AF37; 
+    color: #D4AF37; 
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 1rem;
-    color: #5f5f5f;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1rem;
+    color: #5f5f5f;
 }
 </style>
 </head>
 
 <body class="light-mode">
 
+
 <div class="hero-img">
 
 <nav>
-    <a href="index.html">HOME</a>
-    <a href="price.html">BOOK A TICKET</a>
-    <a href="search.html">COLLECTIONS</a>
-    <a href="gallery.html">GALLERY</a>
-    <a href="about.html">ABOUT THE MUSEUM</a>
-    <a href="events.html">EVENTS</a>
-    <a href="login.html">LOGIN</a>
-    <a href="signup.html">SIGN UP</a>
-    <a href="contact.html">CONTACT US</a>
-    <a href="#" onclick="toggleTheme()">SWITCH THEME</a>
+<a href="index.html">HOME</a>
+<a href="price.html">BOOK A TICKET</a>
+<a href="search.html">COLLECTIONS</a>
+<a href="gallery.html">GALLERY</a>
+<a href="about.html">ABOUT THE MUSEUM</a>
+ <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
+<li><a href="events.html">Events</a></li>
+<a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
+<a href="contact.html">CONTACT US</a>
+<a href="#" onclick="toggleTheme()">Switch Theme</a>
 </nav>
 
 <img src="img.png">
@@ -330,6 +339,7 @@ color: #ccc;
 <div class="line"></div>
 <p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
 </div>
+
 
 <h2 class="section-title">TICKET TYPES & PRICING</h2>
 
@@ -393,66 +403,73 @@ color: #ccc;
 
 </div>
 
-<footer class="museum-footer">
-    <div class="footer-grid">
-        <div class="footer-info">
-            <h3>VISIT US</h3>
-            <p>Tahrir Square, Cairo, Egypt</p>
-            <p>Email: swe2026@gmail.com.eg</p>
-            <p>Phone: +20 29969864</p>
-            <div class="footer-research">
-                <h3>RESEARCH</h3>
-                <p>conservation centre</p>
-                <p>conference centre</p>
-            </div>
-        </div>
-        <div class="footer-hours">
-            <h3>HOURS</h3>
-            <p>Daily: 9:00 AM - 5:00 PM</p>
-            <p>Friday: 9:00 AM - 4:00 PM</p>
-            <div class="footer-employment">
-                <h3>WORK WITH US</h3>
-                <a href="about:blank" target="_blank"> Apply now</a><br>
-                <a href="about:blank" target="_blank">Interview schedules</a><br>
-                <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
-            </div>
-        </div>
-        <div class="footer-social">
-            <h3>FOLLOW US</h3>
-            <div class="social-links">
-                <a href="https://facebook.com" target="_blank">#Facebook</a>
-                <a href="https://instagram.com" target="_blank">#Instagram</a>
-                <a href="https://twitter.com" target="_blank">#Twitter</a>
-            </div>
-            <div class="footer-accessibilty">
-                <h3>ACCESSIBILITY</h3>
-                <p>MAP</p>
-                <p>Mixed-reality experience</p>
-                <p>Virtual Reality view for the museum</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; since 1902. All Rights Reserved.</p>
-    </div>
+<footer>
+☥ © 2026 Egyptian Museum. All Rights Reserved.
 </footer>
+    <div class="footer-grid">
+        <!-- Contact Info -->
+        <div class="footer-info">
+            <h3>VISIT US</h3>
+            <p>Tahrir Square, Cairo, Egypt</p>
+            <p>Email: swe2026@gmail.com.eg</p>
+            <p>Phone: +20 29969864</p>
+        <div class="footer-research">
+            <h3>RESEARCH</h3>
+            <p>conservation centre</p>
+            <p>confernce centre</p>
+            </div>
+        </div>
+        <div class="footer-hours">
+            <h3>HOURS</h3>
+            <p>Daily: 9:00 AM - 5:00 PM</p>
+            <p>Friday: 9:00 AM - 4:00 PM</p>
+            <div class="footer-employment">
+            <h3>WORK WITH US</h3>
+           <a href="about:blank" target="_blank"> Apply now</a><br>
+            <a href="about:blank" target="_blank">Interview schedules</a><br>
+            <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h3>FOLLOW US</h3>
+            <div class="social-links">
+        <a href="https://facebook.com" target="_blank">#Facebook</a>
+        <a href="https://instagram.com" target="_blank">#Instagram</a>
+        <a href="https://twitter.com" target="_blank">#Twitter</a>
+    </div>
+   <div class="footer-accessibilty">
+  <h3>ACCESSIBILITY</h3>
+  <p>MAP</p>
+  <p>Mixed-reality experience</p>
+  <p>Virtuial Reality view for the museum</p>
+   </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; since 1902.</p>
+    </div>
+</footer>
+        
+
+</div>
 
 <script>
 function toggleFAQ(el){
-    let ans = el.querySelector(".faq-answer");
-    let sign = el.querySelector(".faq-item span:last-child");
+    let ans = el.querySelector(".faq-answer");
+    let sign = el.querySelector(".faq-item span:last-child");
 
-    if(ans.style.display==="block"){
-        ans.style.display="none";
-        sign.innerText="+";
-    }else{
-        ans.style.display="block";
-        sign.innerText="-";
-    }
+    if(ans.style.display==="block"){
+        ans.style.display="none";
+        sign.innerText="+";
+    }else{
+        ans.style.display="block";
+        sign.innerText="-";
+    }
 }
 
 function toggleTheme(){
-    document.body.classList.toggle("light-mode");
+    document.body.classList.toggle("light-mode");
 }
 </script>
 
