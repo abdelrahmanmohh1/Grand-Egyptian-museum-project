@@ -63,14 +63,15 @@ textarea {
 }
 
 button {
-    padding: 10px;
-    background: #D4AF37;
-    color: #FEF9E7;
-    border: none;
-    cursor: pointer;
-    font-family: 'Cinzel', serif;
+	background-color:#A68F68;
+	color:#FEF9E7;
+	border: none;
+	margin:0px;
+	padding: 5px 15px;
+	border-radius:15px;
+	 cursor: pointer;
+    font-weight: bold;
 }
-
 iframe {
     width: 80%;
     height: 200px;
