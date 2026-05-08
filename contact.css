@@ -25,7 +25,7 @@ h1 {
 
 nav {
     background-color: #203239;
-    padding: 20px 0; /* Creates the height seen in the image */
+  padding:10px 0px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +39,8 @@ nav a {
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 2px; /* This is the "secret" to the look */
-    font-family: 'Cinzel', serif; /* Sharp, museum-style font */
+    
+    font-family: 'Cinzel', serif; 
     transition: 0.3s;
 }
 
