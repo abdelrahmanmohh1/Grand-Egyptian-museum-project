@@ -25,8 +25,6 @@ body::before{
     z-index:-1;
     transition:0.4s;
 }
-
-/* Updated Nav to match the image exactly */
 nav {
     background-color:#203239;
     color: #FEF9E7;
@@ -47,8 +45,11 @@ nav a {
     display: inline-block; 
     transition: 0.3s; 
 }
-nav a:hover{color:#d4af37;}
-
+nav a:hover{
+    color:#FEF9E7;
+     text-decoration: none; 
+    transform: scale(1.1); 
+}
 .hero-img{
     position:relative;
 }
@@ -137,12 +138,16 @@ td i{color:#d4af37;margin-right:8px;}
 .card p{margin:8px 0;}
 
 .btn{
-    display:block;
+    background-color:#A68F68;
+    border:none;
     text-align:center;
-    padding:10px;
+    padding:5px 15px;
     margin-top:15px;
     border:1px solid #d4af37;
-    color:#d4af37;
+    color:#FEF9E7;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:15px;
     text-decoration:none;
 }
 .btn:hover{
