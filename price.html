@@ -6,9 +6,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* RESET & BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Base Dark Theme (Default) */
         body {
             font-family: 'Cinzel', serif;
             background: #111;
@@ -17,13 +17,21 @@
             min-height: 100vh;
         }
 
-        /* Nav Bar - Centered and Sticky-ready */
+        /* NAVIGATION - Fixed to be beside each other */
         nav {
             background-color: #203239;
             padding: 15px;
             text-align: center;
-            position: relative;
-            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allows wrapping on small screens but keeps them inline */
+            list-style: none;
+        }
+
+        nav a, nav li {
+            display: inline-block;
+            list-style: none;
         }
 
         nav a {
@@ -33,21 +41,12 @@
             font-size: 0.85rem;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
             transition: 0.3s;
         }
 
-        nav a:hover { color: #d4af37; transform: scale(1.1); }
+        nav a:hover { color: #d4af37; }
 
-        /* Theme Toggle Link specific style */
-        .theme-toggle {
-            background: #A68F68;
-            padding: 5px 12px;
-            border-radius: 15px;
-            color: #fff !important;
-        }
-
-        /* Hero Image */
+        /* HERO Section */
         .hero-img img {
             width: 100%;
             height: 400px;
@@ -61,7 +60,7 @@
         .ankh { font-size: 28px; color: #d4af37; }
         .line { width: 150px; height: 1px; background: #d4af37; margin: 15px auto; }
 
-        /* Tables and Content */
+        /* TABLE & CARDS */
         .section-title { text-align: center; color: #d4af37; margin: 40px 0; }
         .table-box { width: 85%; margin: auto; border: 1px solid #d4af37; overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; }
@@ -78,137 +77,137 @@
         }
         .btn:hover { background: #d4af37; color: #000; }
 
-        /* Footer Styles */
+        /* FOOTER - Restored original structure */
         .museum-footer {
-            background-color: #203239;
-            color: #FEF9E7;
-            padding: 60px 10% 20px;
-            margin-top: 80px;
+            background-color: #111;
+            color: white;
+            padding: 40px 10%;
+            font-family: 'Montserrat', sans-serif;
+            border-top: 1px solid #d4af37;
+            margin-top: 40px;
         }
 
-        .footer-grid {
+        .footer-grid { 
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 30px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
         }
 
-        .footer-grid h3 { color: #d4af37; margin-bottom: 15px; font-size: 1rem; }
-        .footer-grid p, .footer-grid a { color: #ccc; font-size: 0.85rem; text-decoration: none; }
-        .social-links a { display: block; margin-bottom: 5px; }
-        .footer-bottom { text-align: center; padding-top: 20px; font-size: 0.8rem; color: #888; }
+        .footer-grid h3 { 
+            font-family: 'Cinzel', serif;
+            color: #D4AF37;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .footer-grid p, .footer-grid a { 
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        .footer-grid a:hover { color: #D4AF37; }
+
+        .footer-accessibilty, .footer-info, .footer-hours, .footer-social {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #5f5f5f;
+        }
 
         /* LIGHT MODE OVERRIDES */
         body.light-mode { background: #FEF9E7; color: #203239; }
         body.light-mode .hero h1, body.light-mode td, body.light-mode th { color: #203239; }
         body.light-mode .table-box, body.light-mode .card { border-color: #203239; }
-        body.light-mode .museum-footer { background-color: #1a2a30; }
+        body.light-mode .museum-footer { background-color: #1a2a30; border-top: 1px solid #1a2a30;}
     </style>
 </head>
 
 <body class="light-mode"> 
 
 <nav>
-<a href="index.html">HOME</a>
-<a href="price.html">BOOK A TICKET</a>
-<a href="search.html">COLLECTIONS</a>
-<a href="gallery.html">GALLERY</a>
-<a href="about.html">ABOUT THE MUSEUM</a>
- <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
-<li><a href="events.html">Events</a></li>
-<a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
-<a href="contact.html">CONTACT US</a>
-<a href="#" onclick="toggleTheme()">Switch Theme</a>
+    <a href="index.html">HOME</a>
+    <a href="price.html">BOOK A TICKET</a>
+    <a href="search.html">COLLECTIONS</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="about.html">ABOUT THE MUSEUM</a>
+    <a href="login.html">LOGIN</a>
+    <li><a href="events.html">EVENTS</a></li>
+    <a href="signup.html">SIGN UP</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="#" onclick="toggleTheme()" class="theme-toggle">SWITCH THEME</a>
 </nav>
-<div class="hero-img">
-<img src="img.png">
 
+<div class="hero-img">
+    <img src="img.png">
 </div>
 
-    <div class="hero">
-        <div class="ankh">☥</div>
-        <h1>TICKET PRICING</h1>
-        <div class="line"></div>
-        <p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
+<div class="hero">
+    <div class="ankh">☥</div>
+    <h1>TICKET PRICING</h1>
+    <div class="line"></div>
+    <p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
+</div>
+
+<h2 class="section-title">TICKET TYPES & PRICING</h2>
+
+<div class="table-box">
+    <table>
+        <thead>
+            <tr>
+                <th>TICKET TYPE</th>
+                <th>PRICE (EGP)</th>
+                <th>DESCRIPTION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="fa-solid fa-user"></i> ADULT</td>
+                <td>200</td>
+                <td>Full access to all exhibits and attractions</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td>
+                <td>100</td>
+                <td>Discounted entry with valid student ID</td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-child"></i> CHILD</td>
+                <td>50</td>
+                <td>For children under 12 years old</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h3>INFO</h3>
+        <p><i class="fa-solid fa-clock"></i> 9:00 AM - 5:00 PM</p>
+        <p><i class="fa-solid fa-location-dot"></i> Tahrir Square, Cairo</p>
+        <p><i class="fa-solid fa-envelope"></i> info@gem.gov.eg</p>
     </div>
 
-    <h2 class="section-title">TICKET TYPES & PRICING</h2>
-
-    <div class="table-box">
-        <table>
-            <thead>
-                <tr>
-                    <th>TICKET TYPE</th>
-                    <th>PRICE (EGP)</th>
-                    <th>DESCRIPTION</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><i class="fa-solid fa-user"></i> ADULT</td>
-                    <td>200</td>
-                    <td>Full access to all exhibits and attractions</td>
-                </tr>
-                <tr>
-                    <td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td>
-                    <td>100</td>
-                    <td>Discounted entry with valid student ID</td>
-                </tr>
-                <tr>
-                    <td><i class="fa-solid fa-child"></i> CHILD</td>
-                    <td>50</td>
-                    <td>For children under 12 years old</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="card" style="text-align:center;">
+        <h3>BOOKING</h3>
+        <i class="fa-solid fa-ticket fa-2x" style="color:#d4af37; margin: 10px 0;"></i>
+        <p>Skip the line and enjoy a seamless experience.</p>
+        <a href="#" class="btn">BOOK NOW</a>
     </div>
+</div>
 
-    <div class="cards">
-        <div class="card">
-            <h3>INFO</h3>
-            <p><i class="fa-solid fa-clock"></i> 9:00 AM - 5:00 PM</p>
-            <p><i class="fa-solid fa-location-dot"></i> Tahrir Square, Cairo</p>
-            <p><i class="fa-solid fa-envelope"></i> info@gem.gov.eg</p>
-        </div>
-
-        <div class="card" style="text-align:center;">
-            <h3>BOOKING</h3>
-            <i class="fa-solid fa-ticket fa-2x" style="color:#d4af37; margin: 10px 0;"></i>
-            <p>Skip the line and enjoy a seamless experience.</p>
-            <a href="#" class="btn">BOOK NOW</a>
-        </div>
-    </div>
-
-    <footer class="museum-footer">
-        <div class="footer-grid">
-            <div>
-                <h3>VISIT US</h3>
-                <p>Tahrir Square, Cairo, Egypt</p>
-                <p>Phone: +20 29969864</p>
-            </div>
-            <div>
-                <h3>HOURS</h3>
-                <p>Daily: 9:00 AM - 5:00 PM</p>
-                <p>Friday: 9:00 AM - 4:00 PM</p>
-            </div>
-            <div class="social-links">
-                <h3>FOLLOW</h3>
-                <a href="#">#Facebook</a>
-                <a href="#">#Instagram</a>
-                <a href="#">#Twitter</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Egyptian Museum. Since 1902.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle("light-mode");
-        }
-    </script>
-</body>
-</html>
+<footer class="museum-footer">
+    <div class="footer-grid">
+        <div class="footer-info">
+            <h3>VISIT US</h3>
+            <p>Tahrir Square, Cairo, Egypt</p>
+            <p>Email: swe2026@gmail
