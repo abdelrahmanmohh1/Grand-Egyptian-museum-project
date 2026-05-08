@@ -28,24 +28,26 @@ nav {
     color: #FEF9E7;
     padding: 15px 0; 
     text-align: center;
-   
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 nav a {
     color: #FEF9E7;
-    margin: 0 12px; 
+    margin: 0 10px; 
     text-transform: uppercase;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-    
+    letter-spacing: 2px; /
     display: inline-block; 
     transition: 0.3s; 
-    font-family: 'Cinzel', serif; /
+    font-family: 'Cinzel', serif; 
 }
 
 nav a:hover {
-    color: #D4AF37; 
+    color: #D4AF37; /* Gold hover from the image */
 }
 
 /* --- Form Styles --- */
