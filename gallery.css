@@ -1,4 +1,10 @@
-
+:root {
+    --gold: #c5a059;
+    --dark-bg: #121212;
+    --light-bg: #f4f1ea;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
 body {
     margin: 0;
     background-color:#FEF9E7;
