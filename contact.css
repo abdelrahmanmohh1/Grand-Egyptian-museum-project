@@ -21,33 +21,48 @@ h1 {
     margin: 15px 0;
     border-radius: 5px;
 }
-
-
 nav {
     background-color: #203239;
-  padding:10px 0px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #FEF9E7;
+    padding: 15px;      
+    text-align: center;
     width: 100%;
 }
 
 nav a {
     color: #FEF9E7;
-    margin: 0 15px;
+    margin: 0 10px;    
     text-transform: uppercase;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-    
+    display: inline-block; 
+    transition: 0.3s; 
     font-family: 'Cinzel', serif; 
-    transition: 0.3s;
 }
-
 
 nav a:hover {
-    color: #D4AF37; /* Gold hover from the image */
+    color: #D4AF37;
 }
+
+#themebtn {
+    background-color: #A68F68;
+    color: #FEF9E7;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block; 
+    margin-left: 10px;     
+    position: static;      
+}
+body.dark-mode #themebtn {
+    background-color: #A68F68;
+    color: #000;
+}
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -173,17 +188,6 @@ body.dark-mode nav,
 body.dark-mode .museum-footer {
     background-color: #000000; 
 }
-
-
-body.dark-mode #themebtn{
-	background-color: #A68F68;
-    color: #000;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;}
-
 body.dark-mode nav a {
     color: #D4AF37;
 }
