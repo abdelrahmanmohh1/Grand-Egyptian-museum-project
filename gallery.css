@@ -33,8 +33,6 @@ body {
     transform: scale(1.1); 
 }
 
-
-
 .heading{
 	margin: 2%; 
     color: #203239;
@@ -47,16 +45,6 @@ main h2 {
     
     padding: 1px;
 }
-#btn-pharaonic {
-    background-color: #A68F68;
-    color: #FEF9E7;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
 .hero {
     text-align: center;
     padding: 90px 30px;
@@ -152,8 +140,11 @@ main h2 {
 #themebtn{
 	background-color:#A68F68;
 	color:#FEF9E7;
-	margin:0px;
-	border-radius:8px;
+	padding:5px 15px;
+	border:none;
+	border-radius:15px;
+	cursor:pointer;
+	font-weight:bold;
 	
 }
 .lightbox-body {
