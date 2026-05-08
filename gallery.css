@@ -226,7 +226,7 @@ color: #ccc;
 }
 
 .social-links a:hover {
-    color: #D4AF37;         /* Turns gold only when you hover */
+    color: #D4AF37;         
 }
 
 .footer-bottom {
@@ -259,7 +259,7 @@ body.dark-mode .navbar a {
     display: inline-block;
     transition: 0.3s;		 }
 body.dark-mode .museum-footer{ background-color:#000000;}
-body.dark-mode .themebtn{
+body.dark-mode #themebtn{
 	background-color: #A68F68;
     color: #000;
     border: none;
