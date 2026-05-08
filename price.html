@@ -9,51 +9,27 @@
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
 
-        /* Root Colors for easy switching */
-        :root {
-            --bg-color: #111;
-            --text-color: #fff;
-            --nav-bg: #203239;
-            --footer-bg: #111;
-            --accent: #d4af37;
-            --card-border: #d4af37;
-        }
-
-        body.light-mode {
-            --bg-color: #FEF9E7;
-            --text-color: #203239;
-            --nav-bg: #203239; /* Nav stays dark like the image */
-            --footer-bg: #203239;
-            --accent: #203239;
-            --card-border: #203239;
-        }
-
         body {
             font-family:'Cinzel', serif;
-            background: var(--bg-color);
-            color: var(--text-color);
-            transition: 0.4s;
+            background:url("https://images.unsplash.com/photo-1594736797933-d0a9ba1c4e56") center/cover no-repeat;
+            color:#fff;
+            transition:0.4s;
             min-height: 100vh;
         }
 
-        /* Background image overlay */
         body::before {
             content:"";
             position:fixed;
             top:0; left:0;
             width:100%; height:100%;
-            background: rgba(0,0,0,0.88);
+            background:rgba(0,0,0,0.88);
             z-index:-1;
-            transition: 0.4s;
+            transition:0.4s;
         }
 
-        body.light-mode::before {
-            background: rgba(255,255,255,0); /* Removes dark overlay in light mode */
-        }
-
-        /* --- NAVBAR --- */
+        /* --- PERFECT NAVBAR --- */
         nav {
-            background-color: var(--nav-bg);
+            background-color: #203239;
             padding: 15px;
             text-align: center;
             display: flex;
@@ -74,57 +50,93 @@
 
         nav a:hover { color: #d4af37; }
 
-        /* --- CONTENT STYLES --- */
+        /* --- HERO --- */
         .hero-img img { width: 100%; height: 650px; object-fit: cover; display: block; }
         .hero { text-align:center; padding:80px 20px 40px; }
-        .hero h1 { font-size:65px; letter-spacing:6px; color: var(--text-color); }
+        .hero h1 { font-size:65px; letter-spacing:6px; }
         .hero p { color:#d4af37; margin-top:10px; letter-spacing:4px; }
         .ankh { text-align:center; font-size:28px; color:#d4af37; margin:10px 0; }
         .line { width:200px; height:1px; background:#d4af37; margin:15px auto; }
 
         .section-title { text-align:center; color:#d4af37; letter-spacing:3px; margin:20px 0; }
 
-        .table-box { width:85%; margin:auto; border:1px solid var(--card-border); }
+        /* --- TABLE --- */
+        .table-box { width:85%; margin:auto; border:1px solid #d4af37; }
         table { width:100%; border-collapse:collapse; }
-        th, td { padding:18px; border-bottom:1px solid var(--card-border); text-align:center; color: var(--text-color); }
+        th, td { padding:18px; border-bottom:1px solid #d4af37; text-align:center; }
         th { color:#d4af37; }
-        
-        .card { width:300px; border:1px solid var(--card-border); padding:25px; transition:0.3s; }
+        td i { color:#d4af37; margin-right:8px; }
+
+        /* --- INFO & BOOKING CARDS (Restored) --- */
+        .cards { display:flex; justify-content:center; gap:30px; margin:60px; flex-wrap:wrap; }
+        .card { width:300px; border:1px solid #d4af37; padding:25px; transition:0.3s; }
+        .card:hover { background:rgba(212,175,55,0.1); transform:translateY(-5px); }
         .card h3 { color:#d4af37; text-align:center; margin-bottom:20px; }
+        .card p { margin:8px 0; }
 
         .btn {
             display:block; text-align:center; padding:10px; margin-top:15px;
-            border:1px solid var(--card-border); color: var(--text-color); text-decoration:none;
+            border:1px solid #d4af37; color:#d4af37; text-decoration:none;
         }
-        .btn:hover { background: #d4af37; color: #000; border-color: #d4af37; }
+        .btn:hover { background:#d4af37; color:#000; }
 
-        /* --- FOOTER FIXED --- */
+        .faq-item { border-bottom:1px solid #d4af37; padding:10px 0; cursor:pointer; display:flex; justify-content:space-between; }
+        .faq-answer { display:none; font-size:14px; color:#ccc; margin-top:5px; }
+
+        /* --- FOOTER (Restored with Switching Support) --- */
         .museum-footer {
-            background-color: var(--footer-bg);
-            color: #FEF9E7;
-            padding: 60px 10% 20px;
+            background-color: #111;
+            color: white;
+            padding: 40px 10%;
             font-family: 'Montserrat', sans-serif;
             border-top: 1px solid #d4af37;
             margin-top: 40px;
-            transition: 0.4s;
         }
 
-        .footer-grid h3 { color: #D4AF37; margin-bottom: 15px; font-family: 'Cinzel', serif; }
-        .footer-grid p, .footer-grid a { color: #bbb; font-size: 0.85rem; text-decoration: none; }
-        .footer-grid a:hover { color: #D4AF37; }
-        .footer-bottom { text-align: center; padding-top: 20px; color: #5f5f5f; }
+        .footer-grid { 
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
 
-        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; }
+        .footer-grid h3 { 
+            font-family: 'Cinzel', serif;
+            color: #D4AF37;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .footer-grid p, .footer-grid a { 
+            font-size: 0.85rem;
+            color: #bbb;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+        
         .footer-info, .footer-hours, .footer-social { flex: 1; min-width: 200px; }
         .social-links { display: flex; flex-direction: column; gap: 6px; }
+        .social-links a:hover { color: #D4AF37; }
+        .footer-bottom { text-align: center; padding-top: 20px; font-size: 1rem; color: #5f5f5f; }
 
-        /* FAQ */
-        .faq-item { border-bottom:1px solid var(--card-border); padding:10px 0; cursor:pointer; display:flex; justify-content:space-between; }
-        .faq-answer { display:none; font-size:14px; margin-top:5px; color: var(--text-color); }
+        /* --- LIGHT MODE FIXES --- */
+        .light-mode { background:#FEF9E7; color:#203239; }
+        .light-mode::before { background:rgba(255,255,255,0.2); }
+        .light-mode, .light-mode p, .light-mode span, .light-mode td, .light-mode th, .light-mode h1, .light-mode h2, .light-mode h3 { color:#203239; }
+        .light-mode .table-box, .light-mode .card, .light-mode .museum-footer { border-color:#203239; }
+        .light-mode .museum-footer { background-color: #203239; border-top: none; }
+        .light-mode .museum-footer p, .light-mode .museum-footer a { color: #FEF9E7; }
+        .light-mode .btn { border-color:#203239; color:#203239; }
+        .light-mode .btn:hover { background:#203239; color:#FEF9E7; }
+        .light-mode .faq-answer { color:#203239; }
     </style>
 </head>
 
-<body class="light-mode"> <nav>
+<body class="light-mode">
+
+    <nav>
         <a href="index.html">HOME</a>
         <a href="price.html">BOOK A TICKET</a>
         <a href="search.html">COLLECTIONS</a>
@@ -137,7 +149,9 @@
         <a href="#" onclick="toggleTheme()">SWITCH THEME</a>
     </nav>
 
-    <div class="hero-img"><img src="img.png"></div>
+    <div class="hero-img">
+        <img src="img.png">
+    </div>
 
     <div class="hero">
         <div class="ankh">☥</div>
@@ -151,28 +165,32 @@
     <div class="table-box">
         <table>
             <tr><th>TICKET TYPE</th><th>PRICE</th><th>DESCRIPTION</th></tr>
-            <tr><td><i class="fa-solid fa-user"></i> ADULT</td><td>200</td><td>Full access to all exhibits</td></tr>
-            <tr><td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td><td>100</td><td>With valid ID</td></tr>
-            <tr><td><i class="fa-solid fa-child"></i> CHILD</td><td>50</td><td>Under 12 years old</td></tr>
+            <tr><td><i class="fa-solid fa-user"></i> ADULT</td><td>200</td><td>Full access to all exhibits and attractions</td></tr>
+            <tr><td><i class="fa-solid fa-graduation-cap"></i> STUDENT</td><td>100</td><td>Discounted entry with valid student ID</td></tr>
+            <tr><td><i class="fa-solid fa-child"></i> CHILD</td><td>50</td><td>For children under 12 years old</td></tr>
         </table>
     </div>
 
     <div class="cards">
         <div class="card">
-            <h3>INFO</h3>
+            <h3>MUSEUM HOURS & INFO</h3>
             <p><i class="fa-solid fa-clock"></i> 9:00 AM - 5:00 PM</p>
             <p><i class="fa-solid fa-location-dot"></i> Tahrir Square, Cairo</p>
             <p><i class="fa-solid fa-envelope"></i> info@mail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +20 123456789</p>
         </div>
+
         <div class="card" style="text-align:center;">
-            <h3>BOOKING</h3>
-            <i class="fa-solid fa-ticket fa-2x" style="color:#d4af37;"></i>
+            <h3>BOOK YOUR TICKET</h3>
+            <i class="fa-solid fa-ticket fa-2x" style="color:#d4af37; margin: 10px 0;"></i>
+            <p>Skip the line and enjoy a seamless experience.</p>
             <a href="#" class="btn">BOOK NOW</a>
         </div>
+
         <div class="card">
             <h3>FAQ</h3>
             <div onclick="toggleFAQ(this)">
-                <div class="faq-item"><span>Refunds?</span><span>+</span></div>
+                <div class="faq-item"><span>Can I refund my ticket?</span><span>+</span></div>
                 <div class="faq-answer">Yes, within 24 hours.</div>
             </div>
         </div>
@@ -184,20 +202,37 @@
                 <h3>VISIT US</h3>
                 <p>Tahrir Square, Cairo, Egypt</p>
                 <p>Email: swe2026@gmail.com.eg</p>
-                <div style="margin-top:15px;"><h3>RESEARCH</h3><p>Conservation Centre</p></div>
+                <p>Phone: +20 29969864</p>
+                <div style="margin-top: 15px;">
+                    <h3>RESEARCH</h3>
+                    <p>conservation centre</p>
+                    <p>conference centre</p>
+                </div>
             </div>
             <div class="footer-hours">
                 <h3>HOURS</h3>
                 <p>Daily: 9:00 AM - 5:00 PM</p>
-                <div style="margin-top:15px;"><h3>WORK WITH US</h3><a href="#">Apply now</a></div>
+                <p>Friday: 9:00 AM - 4:00 PM</p>
+                <div style="margin-top: 15px;">
+                    <h3>WORK WITH US</h3>
+                    <a href="#">Apply now</a><br>
+                    <a href="#">Interview schedules</a><br>
+                    <a href="#">Report an issue</a>
+                </div>
             </div>
             <div class="footer-social">
                 <h3>FOLLOW US</h3>
                 <div class="social-links">
                     <a href="#">#Facebook</a>
                     <a href="#">#Instagram</a>
+                    <a href="#">#Twitter</a>
                 </div>
-                <div style="margin-top:15px;"><h3>ACCESSIBILITY</h3><p>MAP & VR View</p></div>
+                <div style="margin-top: 15px;">
+                    <h3>ACCESSIBILITY</h3>
+                    <p>MAP</p>
+                    <p>Mixed-reality experience</p>
+                    <p>Virtual Reality view</p>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
@@ -206,16 +241,17 @@
     </footer>
 
     <script>
-        function toggleFAQ(el){
-            let ans = el.querySelector(".faq-answer");
-            let sign = el.querySelector(".faq-item span:last-child");
-            ans.style.display = (ans.style.display === "block") ? "none" : "block";
-            sign.innerText = (ans.style.display === "block") ? "-" : "+";
-        }
+    function toggleFAQ(el){
+        let ans = el.querySelector(".faq-answer");
+        let sign = el.querySelector(".faq-item span:last-child");
+        ans.style.display = (ans.style.display==="block") ? "none" : "block";
+        sign.innerText = (ans.style.display==="block") ? "-" : "+";
+    }
 
-        function toggleTheme(){
-            document.body.classList.toggle("light-mode");
-        }
+    function toggleTheme(){
+        document.body.classList.toggle("light-mode");
+    }
     </script>
+
 </body>
 </html>
