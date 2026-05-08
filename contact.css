@@ -25,24 +25,25 @@ h1 {
 
 nav {
     background-color: #203239;
-    color: #FEF9E7;
-    padding: 15px 0; 
-    text-align: center;
-    
+    padding: 20px 0; /* Creates the height seen in the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 nav a {
     color: #FEF9E7;
-    margin: 0 10px; 
+    margin: 0 15px;
     text-transform: uppercase;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-   
-    display: inline-block; 
-    transition: 0.3s; 
-    font-family: 'Cinzel', serif; 
+    letter-spacing: 2px; /* This is the "secret" to the look */
+    font-family: 'Cinzel', serif; /* Sharp, museum-style font */
+    transition: 0.3s;
 }
+
 
 nav a:hover {
     color: #D4AF37; /* Gold hover from the image */
