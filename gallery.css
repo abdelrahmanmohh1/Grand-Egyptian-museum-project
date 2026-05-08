@@ -237,15 +237,28 @@ color: #ccc;
 }
 
 body.dark-mode {
-    background-color: var(--dark-bg);
-    color: #eee;
+	background-color: #1A1A1A; 
+    color: #D4AF37;            
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
 }
-body.dark-mode .navbar { background: #1a1a1a; }
-body.dark-mode .navbar a { color: #d4af37; }
+body.dark-mode .navbar { 
+	background-color: #000000;
+    color: #D4AF37;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #D4AF37;   }
+body.dark-mode .navbar a { 
+	color: #D4AF37;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;		 }
 body.dark-mode .museum-footer{ background-color:#000000;}
-
-	
-
 .gallery-container {
   display: flex;
   flex-wrap:wrap;
