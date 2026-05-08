@@ -26,29 +26,26 @@ h1 {
 nav {
     background-color: #203239;
     color: #FEF9E7;
-    padding: 18px 0; /* Vertical spacing */
+    padding: 15px 0; 
     text-align: center;
-    display: flex; /* Use flex to center properly */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+   
 }
 
 nav a {
     color: #FEF9E7;
-    margin: 0 15px; /* Spacing between links */
+    margin: 0 12px; 
     text-transform: uppercase;
     font-size: 0.85rem;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 2px; /* Airy look from the image */
+    letter-spacing: 2px; 
     display: inline-block; 
     transition: 0.3s; 
-    font-family: 'Cinzel', serif; /* The sharp Egyptian font style */
+    font-family: 'Cinzel', serif; /
 }
 
 nav a:hover {
-    color: #D4AF37; /* Gold hover from the image */
+    color: #D4AF37; 
 }
 
 /* --- Form Styles --- */
