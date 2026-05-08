@@ -25,25 +25,29 @@ body::before{
     z-index:-1;
     transition:0.4s;
 }
+
+/* Updated Nav to match the image exactly */
 nav {
     background-color:#203239;
     color: #FEF9E7;
     padding: 15px; 
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav a {
     color:#FEF9E7;
     margin: 0 10px;
-	text-transform:uppercase;
-	font-size:0.85rem;
+    text-transform:uppercase;
+    font-size:0.85rem;
     text-decoration: none;
     font-weight: bold;
     display: inline-block; 
     transition: 0.3s; 
 }
 nav a:hover{color:#d4af37;}
-
 
 .hero-img{
     position:relative;
@@ -55,8 +59,6 @@ nav a:hover{color:#d4af37;}
     object-fit:cover;
     display:block;
 }
-
-
 
 .hero{
     text-align:center;
@@ -93,7 +95,6 @@ nav a:hover{color:#d4af37;}
     margin:20px 0;
 }
 
-
 .table-box{
     width:85%;
     margin:auto;
@@ -110,7 +111,6 @@ th,td{
 }
 th{color:#d4af37;}
 td i{color:#d4af37;margin-right:8px;}
-
 
 .cards{
     display:flex;
@@ -163,15 +163,6 @@ td i{color:#d4af37;margin-right:8px;}
     color:#ccc;
     margin-top:5px;
 }
-
-
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:1px solid #d4af37;
-    margin-top:40px;
-}
-
 
 .light-mode{
     background:#FEF9E7;
@@ -274,13 +265,10 @@ color: #ccc;
     margin: 5px 0;
 }
 
-
-
 .footer-social {
     display: flex;
     flex-direction: column;
 }
-
 
 .social-links {
     display: flex;
@@ -313,20 +301,19 @@ color: #ccc;
 
 <body class="light-mode">
 
-
 <div class="hero-img">
 
 <nav>
-<a href="index.html">HOME</a>
-<a href="price.html">BOOK A TICKET</a>
-<a href="search.html">COLLECTIONS</a>
-<a href="gallery.html">GALLERY</a>
-<a href="about.html">ABOUT THE MUSEUM</a>
- <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
-<li><a href="events.html">Events</a></li>
-<a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
-<a href="contact.html">CONTACT US</a>
-<a href="#" onclick="toggleTheme()">Switch Theme</a>
+    <a href="index.html">HOME</a>
+    <a href="price.html">BOOK A TICKET</a>
+    <a href="search.html">COLLECTIONS</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="about.html">ABOUT THE MUSEUM</a>
+    <a href="events.html">EVENTS</a>
+    <a href="login.html">LOGIN</a>
+    <a href="signup.html">SIGN UP</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="#" onclick="toggleTheme()">SWITCH THEME</a>
 </nav>
 
 <img src="img.png">
@@ -339,7 +326,6 @@ color: #ccc;
 <div class="line"></div>
 <p>JOURNEY THROUGH THE HISTORY OF EGYPT</p>
 </div>
-
 
 <h2 class="section-title">TICKET TYPES & PRICING</h2>
 
@@ -403,20 +389,17 @@ color: #ccc;
 
 </div>
 
-<footer>
-☥ © 2026 Egyptian Museum. All Rights Reserved.
-</footer>
+<footer class="museum-footer">
     <div class="footer-grid">
-        <!-- Contact Info -->
         <div class="footer-info">
             <h3>VISIT US</h3>
             <p>Tahrir Square, Cairo, Egypt</p>
             <p>Email: swe2026@gmail.com.eg</p>
             <p>Phone: +20 29969864</p>
-        <div class="footer-research">
-            <h3>RESEARCH</h3>
-            <p>conservation centre</p>
-            <p>confernce centre</p>
+            <div class="footer-research">
+                <h3>RESEARCH</h3>
+                <p>conservation centre</p>
+                <p>conference centre</p>
             </div>
         </div>
         <div class="footer-hours">
@@ -424,35 +407,31 @@ color: #ccc;
             <p>Daily: 9:00 AM - 5:00 PM</p>
             <p>Friday: 9:00 AM - 4:00 PM</p>
             <div class="footer-employment">
-            <h3>WORK WITH US</h3>
-           <a href="about:blank" target="_blank"> Apply now</a><br>
-            <a href="about:blank" target="_blank">Interview schedules</a><br>
-            <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
+                <h3>WORK WITH US</h3>
+                <a href="about:blank" target="_blank"> Apply now</a><br>
+                <a href="about:blank" target="_blank">Interview schedules</a><br>
+                <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
             </div>
         </div>
         <div class="footer-social">
             <h3>FOLLOW US</h3>
             <div class="social-links">
-        <a href="https://facebook.com" target="_blank">#Facebook</a>
-        <a href="https://instagram.com" target="_blank">#Instagram</a>
-        <a href="https://twitter.com" target="_blank">#Twitter</a>
-    </div>
-   <div class="footer-accessibilty">
-  <h3>ACCESSIBILITY</h3>
-  <p>MAP</p>
-  <p>Mixed-reality experience</p>
-  <p>Virtuial Reality view for the museum</p>
-   </div>
-        </div>
+                <a href="https://facebook.com" target="_blank">#Facebook</a>
+                <a href="https://instagram.com" target="_blank">#Instagram</a>
+                <a href="https://twitter.com" target="_blank">#Twitter</a>
+            </div>
+            <div class="footer-accessibilty">
+                <h3>ACCESSIBILITY</h3>
+                <p>MAP</p>
+                <p>Mixed-reality experience</p>
+                <p>Virtual Reality view for the museum</p>
+            </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; since 1902.</p>
+        <p>&copy; since 1902. All Rights Reserved.</p>
     </div>
 </footer>
-        
-
-</div>
 
 <script>
 function toggleFAQ(el){
@@ -475,6 +454,3 @@ function toggleTheme(){
 
 </body>
 </html>
-
-
-
