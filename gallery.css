@@ -259,6 +259,15 @@ body.dark-mode .navbar a {
     display: inline-block;
     transition: 0.3s;		 }
 body.dark-mode .museum-footer{ background-color:#000000;}
+body.dark-mode .themebtn{
+	background-color: #A68F68;
+    color: #000;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;}
+
 .gallery-container {
   display: flex;
   flex-wrap:wrap;
