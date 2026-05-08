@@ -263,7 +263,9 @@ body.dark-mode #themebtn{
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;}
-
+body.dark-mode nav a:hover {
+    color: #FEF9E7;
+}
 .gallery-container {
   display: flex;
   flex-wrap:wrap;
