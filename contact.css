@@ -62,7 +62,7 @@ textarea {
     height: 30px;
 }
 
-button {
+.button {
 	background-color:#A68F68;
 	color:#FEF9E7;
 	border: none;
