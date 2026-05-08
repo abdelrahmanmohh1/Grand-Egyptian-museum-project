@@ -17,9 +17,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #FEF9E7;
-    text-decoration: none; 
-    transform: scale(1.1); 
+    color: #D4AF37; 
+	
 }
 .event {
   display: flex;
