@@ -62,7 +62,7 @@ textarea {
     height: 30px;
 }
 
-.button {
+button {
 	background-color:#A68F68;
 	color:#FEF9E7;
 	border: none;
@@ -141,8 +141,11 @@ iframe {
 }
 
 body.dark-mode {
-    background-color: #000000 !important; 
-    color: #D4AF37;                      
+	background-color: #1A1A1A; 
+    color: #D4AF37;            
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
 }
 
 body.dark-mode .box, 
@@ -156,15 +159,9 @@ body.dark-mode nav,
 body.dark-mode .museum-footer {
     background-color: #000000; 
 }
-body.dark-mode {
-	background-color: #1A1A1A; 
-    color: #D4AF37;            
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
-}
 
-body.dark-mode .button{
+
+body.dark-mode button{
 	background-color: #A68F68;
     color: #000;
     border: none;
