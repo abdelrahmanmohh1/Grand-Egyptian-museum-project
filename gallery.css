@@ -27,12 +27,8 @@ body {
     transition: 0.3s; 
 	margin: 0 10px;
 }
-.navbar a:hover {
-	color: #FEF9E7;
-    text-decoration: none; 
-    transform: scale(1.1);
-   
-}
+nav a:hover {
+    color: #D4AF37; }
 
 .hero {
     text-align: center;
