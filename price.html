@@ -50,6 +50,8 @@ nav a:hover{color:#d4af37;}
     object-fit:cover;
     display:block;
 }
+
+/*  NAV فوق الصورة */
 .hero-img nav{
     position:absolute;
     top:0;
@@ -329,7 +331,6 @@ color: #ccc;
 <li><a href="events.html">Events</a></li>
 <a href="signup.html" class="nav-btn">Sign up</a><!--sign up veness file name-->
 <a href="contact.html">CONTACT US</a>
-    <a href="logout.html">LOG OUT</a>
 <a href="#" onclick="toggleTheme()">Switch Theme</a>
 </nav>
 
@@ -423,7 +424,7 @@ color: #ccc;
             <p>confernce centre</p>
             </div>
         </div>
-        <div class="footer-hours"><!--working hours-->
+        <div class="footer-hours">
             <h3>HOURS</h3>
             <p>Daily: 9:00 AM - 5:00 PM</p>
             <p>Friday: 9:00 AM - 4:00 PM</p>
@@ -433,7 +434,7 @@ color: #ccc;
             <a href="about:blank" target="_blank">Interview schedules</a><br>
             <a href="about:blank" target="_blank"> Report an employee or an issue</a><br>
             </div>
-        </div> <!--end of w.hours div-->
+        </div>
         <div class="footer-social">
             <h3>FOLLOW US</h3>
             <div class="social-links">
@@ -448,10 +449,10 @@ color: #ccc;
   <p>Virtuial Reality view for the museum</p>
    </div>
         </div>
-        </div><!--end of  div-->
+        </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; since 1902.</p><!-- the small c letter-->
+        <p>&copy; since 1902.</p>
     </div>
 </footer>
         
@@ -459,6 +460,24 @@ color: #ccc;
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light-mode") {
+        document.body.classList.add("light-mode");
+    } else if (savedTheme === "dark-mode") {
+        document.body.classList.remove("light-mode");
+    }
+});
+
+function toggleTheme() {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light-mode");
+    } else {
+        localStorage.setItem("theme", "dark-mode");
+    }
+}
 function toggleFAQ(el){
     let ans = el.querySelector(".faq-answer");
     let sign = el.querySelector(".faq-item span:last-child");
@@ -471,10 +490,7 @@ function toggleFAQ(el){
         sign.innerText="-";
     }
 }
-
-function toggleTheme(){
-    document.body.classList.toggle("light-mode");
-}
+</script>
 </script>
 
 </body>
