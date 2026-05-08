@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const themeBtn = document.getElementById('theme-btn');
+    const themeBtn = document.getElementById('themebtn');
     const bodyElement = document.body;
 
     if (localStorage.getItem('dark-mode') === 'enabled') {
