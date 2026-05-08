@@ -28,10 +28,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #FEF9E7;
-    text-decoration: none; 
-    transform: scale(1.1); 
+    color: #D4AF37; 
+	text-decoration:none;
 }
+
 .heading{
 	margin: 2%; 
     color: #203239;
