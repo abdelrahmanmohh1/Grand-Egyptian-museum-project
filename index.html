@@ -12,7 +12,7 @@
     <nav class="navbar">
         <a href="index.html">Home</a>
        <a href="price.html" class="nav-btn">book a ticket</a><!--george file name-->
-        <a href="search.html">collections</a><!--haya file name-->
+        <a href="search.html"> Search collections</a><!--haya file name-->
         <a href="gallery.html">gallery</a><!--haya file name-->
         <a href="about.html">About the museum</a><!--judy file name-->
         <a href="login.html" class="nav-btn">Login</a><!--login veness file name-->
@@ -82,17 +82,23 @@
 
 <script src="script.js"></script>
 <script>
-  
     const themeBtn = document.getElementById('theme-toggle');
     const bodyElement = document.body;
+    if (localStorage.getItem("theme") === "light-mode") {
+        bodyElement.classList.add("light-mode");
+        themeBtn.textContent = "Switch to Dark";
+    }
     themeBtn.onclick = function() {
-        bodyElement.classList.toggle('light-mode');
+        bodyElement.classList.toggle('light-mode');   
         if (bodyElement.classList.contains('light-mode')) {
             themeBtn.textContent = "Switch to Dark";
+            localStorage.setItem("theme", "light-mode");
         } else {
             themeBtn.textContent = "Switch to Light";
+            localStorage.setItem("theme", "dark-mode");
         }
-    };
+    }
+</script>
 </script>
 </body>
 </html>
