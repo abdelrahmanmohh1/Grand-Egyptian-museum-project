@@ -1,56 +1,39 @@
-/* --- THEME SYSTEM (2 Marks: Save/Load) --- */
+/* Theme Toggle System - Matches Gallery & Events */
 
-function toggleTheme() {
-    const themeLink = $("#theme-link");
-    let selectedTheme = "";
+const themeBtn = document.getElementById('themebtn');
+const body = document.body;
 
-    // Toggle between the two files
-    if (themeLink.attr("href") === "theme-light.css") {
-        themeLink.attr("href", "theme-dark.css");
-        selectedTheme = "dark";
-    } else {
-        themeLink.attr("href", "theme-light.css");
-        selectedTheme = "light";
-    }
-
-    // WRITE: Save preference (Requirement: Write to Storage)
-    localStorage.setItem("museum-theme-choice", selectedTheme);
-}
-
+// Apply saved theme on page load
 function applySavedTheme() {
-    // READ: Get preference (Requirement: Read from Storage)
-    const savedTheme = localStorage.getItem("museum-theme-choice");
-    const themeLink = $("#theme-link");
-
-    if (savedTheme === "dark") {
-        themeLink.attr("href", "theme-dark.css");
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
     } else {
-        themeLink.attr("href", "theme-light.css");
+        body.classList.remove('dark-mode');
     }
 }
 
-/* --- DOCUMENT READY --- */
-$(document).ready(function() {
-    // Apply theme immediately on load
+// Toggle theme and save preference
+function toggleTheme() {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Apply saved theme immediately
     applySavedTheme();
-
-    // Theme Switcher Button
-    $("#themebtn").on("click", function() {
-        toggleTheme();
-    });
-
-    // Login Security Check (Requirement: Read/Write Storage)
-    // Checks if the user actually signed up before viewing collections
-    const protectedPages = ["search.html", "gallery.html", "price.html"];
-    const currentPage = window.location.pathname.split("/").pop();
-
-    if (protectedPages.includes(currentPage)) {
-        const isLoggedIn = localStorage.getItem("isLoggedIn");
-        const userEmail = localStorage.getItem("userEmail");
-
-        if (isLoggedIn !== "true" || !userEmail) {
-            alert("Access Denied: Please Sign Up to view our collections.");
-            window.location.href = "signup.html";
-        }
+    
+    // Add click listener to theme button
+    if (themeBtn) {
+        themeBtn.addEventListener('click', toggleTheme);
     }
 });
+
+// Also apply theme as early as possible (before DOM ready)
+applySavedTheme();
