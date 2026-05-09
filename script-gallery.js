@@ -60,35 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     galleryItems.forEach(item => {
         const itemName = item.querySelector('.desc').innerText.trim();
-        
-        if (!item.querySelector('.fav-btn')) {
-            const btn = document.createElement('button');
-            btn.className = 'fav-btn';
-            btn.innerHTML = '❤';
-            item.appendChild(btn);
-        }
+        const btn = item.querySelector('.fav-btn');
 
-        const heartBtn = item.querySelector('.fav-btn');
+        if (!btn) return;
 
         if (favorites.includes(itemName)) {
-            heartBtn.classList.add('active');
+            btn.classList.add('active');
         }
 
-      
-        heartBtn.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            
-            if (favorites.includes(itemName)) {
-                // Remove from the list
-                favorites = favorites.filter(name => name !== itemName);
-                heartBtn.classList.remove('active');
-            } else {
-                
-                favorites.push(itemName);
-                heartBtn.classList.add('active');
-            }
+       
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
 
-           
+            if (favorites.includes(itemName)) {
+        
+                favorites = favorites.filter(name => name !== itemName);
+                btn.classList.remove('active');
+            } else {
+            
+                favorites.push(itemName);
+                btn.classList.add('active');
+            }
             localStorage.setItem('myFavorites', JSON.stringify(favorites));
         });
     });
