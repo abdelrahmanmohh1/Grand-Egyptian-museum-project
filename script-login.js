@@ -27,11 +27,10 @@ window.onload = function () {
 
     
     if (
-        localStorage.getItem("isLoggedIn") !== "true" &&
-        !window.location.href.includes("login.html")
-    ) {
-        window.location.href = "login.html";
-    }
+    localStorage.getItem("isLoggedIn") !== "true" &&
+    !window.location.href.includes("login.html") &&
+    !window.location.href.includes("signup.html")
+)  {window.location.href = "login.html";}
 };
 
 function logout() {
