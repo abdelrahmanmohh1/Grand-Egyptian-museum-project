@@ -98,16 +98,15 @@ button {
 	 cursor: pointer;
     font-weight: bold;
 }
-#themebtn {
-    background-color: #A68F68;
-    color: #FEF9E7;
-    border: none;
-    padding: 5px 15px;
-    border-radius: 15px;
-    cursor: pointer;
+#themebtn{
+	background-color:#A68F68;
+	color:#FEF9E7;
+	border: none;
+	margin:0px;
+	padding: 5px 15px;
+	border-radius:15px;
+	 cursor: pointer;
     font-weight: bold;
-    position: absolute;
-    right: 20px;
 }
 
 
