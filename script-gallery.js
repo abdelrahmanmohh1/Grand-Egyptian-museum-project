@@ -51,20 +51,39 @@ function goToSearch() {
     const query = document.getElementById('homeSearchInput').value;
     window.location.href = `search.html?q=${encodeURIComponent(query)}`;
 }
-function toggleFavorite(itemId) {
-   
+document.addEventListener('DOMContentLoaded', () => {
+ 
+    const galleryItems = document.querySelectorAll('.gallery-item');
     let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
 
-    if (favorites.includes(itemId)) {
-       
-        favorites = favorites.filter(id => id !== itemId);
-        alert("Removed from favorites!");
-    } else {
-        
-        favorites.push(itemId);
-        alert("Added to favorites!");
-    }
-    localStorage.setItem('myFavorites', JSON.stringify(favorites));
-   
-    event.target.classList.toggle('active');
-}
+    galleryItems.forEach(item => {
+        const itemId = item.getAttribute('data-id');
+        const btn = item.querySelector('.fav-btn');
+
+        if (!itemId || !btn) return; 
+    
+        if (favorites.includes(itemId)) {
+            btn.classList.add('active');
+            btn.innerText = "❤️ Favorited";
+        }
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (favorites.includes(itemId)) {
+                favorites = favorites.filter(id => id !== itemId);
+                btn.classList.remove('active');
+                btn.innerText = "❤️ Add to Favorites";
+                console.log(`Removed: ${itemId}`);
+            } else {
+                favorites.push(itemId);
+                btn.classList.add('active');
+                btn.innerText = "❤️ Favorited";
+                console.log(`Added: ${itemId}`);
+            }
+
+            localStorage.setItem('myFavorites', JSON.stringify(favorites));
+        });
+    });
+});
