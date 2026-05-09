@@ -8,12 +8,17 @@
 <body class="login-page">
  <div class="login container">
  <button class="btn darkmode"  type= "button" onclick="toggleMode()"> darkmode</button>
-  <form  onsubmit="goToHome(event)">
-  <h1>login</h1>
-   <input type ="text" placeholder="username">
-   <input type="password" placeholder="password">
+  <form onsubmit="handleLogin(event)">
+  <h1>Login</h1>
+  <input type="text" id="userCode" placeholder="Enter Username" required>
+
+<input type="password" id="zipCode" placeholder="Enter Password" required>
    
    <button class="btn login" type ="submit" >Login</button>
+   <p class="signup-link">
+  You don't have an account?
+  <a href="signup.html">Sign Up</a>
+</p>
    
   </form>
  </div>
