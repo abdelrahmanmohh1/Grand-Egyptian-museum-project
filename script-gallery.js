@@ -51,38 +51,44 @@ function goToSearch() {
     const query = document.getElementById('homeSearchInput').value;
     window.location.href = `search.html?q=${encodeURIComponent(query)}`;
 }
+
+});
 document.addEventListener('DOMContentLoaded', () => {
- 
     const galleryItems = document.querySelectorAll('.gallery-item');
+    
     let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
 
     galleryItems.forEach(item => {
-        const itemId = item.getAttribute('data-id');
-        const btn = item.querySelector('.fav-btn');
-
-        if (!itemId || !btn) return; 
-    
-        if (favorites.includes(itemId)) {
-            btn.classList.add('active');
-            btn.innerText = "❤️ Favorited";
+        const itemName = item.querySelector('.desc').innerText.trim();
+        
+        if (!item.querySelector('.fav-btn')) {
+            const btn = document.createElement('button');
+            btn.className = 'fav-btn';
+            btn.innerHTML = '❤';
+            item.appendChild(btn);
         }
 
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+        const heartBtn = item.querySelector('.fav-btn');
 
-            if (favorites.includes(itemId)) {
-                favorites = favorites.filter(id => id !== itemId);
-                btn.classList.remove('active');
-                btn.innerText = "❤️ Add to Favorites";
-                console.log(`Removed: ${itemId}`);
+        if (favorites.includes(itemName)) {
+            heartBtn.classList.add('active');
+        }
+
+      
+        heartBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            
+            if (favorites.includes(itemName)) {
+                // Remove from the list
+                favorites = favorites.filter(name => name !== itemName);
+                heartBtn.classList.remove('active');
             } else {
-                favorites.push(itemId);
-                btn.classList.add('active');
-                btn.innerText = "❤️ Favorited";
-                console.log(`Added: ${itemId}`);
+                
+                favorites.push(itemName);
+                heartBtn.classList.add('active');
             }
 
+           
             localStorage.setItem('myFavorites', JSON.stringify(favorites));
         });
     });
