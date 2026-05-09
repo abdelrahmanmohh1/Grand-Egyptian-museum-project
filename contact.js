@@ -1,22 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeBtn = document.getElementById('themebtn');
-    const bodyElement = document.body;
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        bodyElement.classList.add('dark-mode');
-    }
-
-    if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
-            bodyElement.classList.toggle('dark-mode');
-
-            // Save the user's preference to localStorage (Requirement 2)
-            if (bodyElement.classList.contains('dark-mode')) {
-                localStorage.setItem('dark-mode', 'enabled');
-            } else {
-                localStorage.setItem('dark-mode', 'disabled');
-            }
-        });
-    }
 
     const contactForm = document.getElementById('museumContactForm');
     const errorDisplay = document.getElementById('errorMessage');
