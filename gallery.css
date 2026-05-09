@@ -374,20 +374,25 @@ div.gallery-item div.desc {
   font-size: 0.9rem;
 }
 .fav-btn {
-    background: none;
-    border: none;
-    color: #ccc; /* Grey heart when not favorited */
-    font-size: 24px;
+    background-color: #f4f1ea;
+    border: 1px solid #A68F68;
+    color: #A68F68;
+    padding: 8px 15px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: 0.3s;
-    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 
 .fav-btn.active {
-    color: #e74c3c; /* Red heart when favorited */
-    transform: scale(1.2);
+    background-color: #A68F68;
+    color: white;
+    border-color: #203239;
 }
 
 .fav-btn:hover {
-    color: #ff7675;
+    background-color: #e6e0d0;
 }
