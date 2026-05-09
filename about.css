@@ -1,5 +1,11 @@
 /* ==================== LIGHT THEME (DEFAULT) ==================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --gold: #c5a059;
     --dark-bg: #121212;
@@ -16,7 +22,6 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Georgia', serif;
-    transition: var(--transition);
 }
 
 nav {
@@ -50,7 +55,12 @@ nav a:hover {
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
-    transition: var(--transition);
+    transition: 0.3s;
+}
+
+#themebtn:hover {
+    background-color: #8B7355;
+    transform: scale(1.05);
 }
 
 .heading {
@@ -80,10 +90,9 @@ main h2 {
 .story {
     width: 60%;
     padding: 30px;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
     overflow-y: auto;
-    display: flex;
     color: #333;
 }
 
@@ -97,7 +106,6 @@ main h2 {
 .story-image {
     width: 40%;
     height: auto;
-    display: flex;
 }
 
 .video-section {
@@ -114,9 +122,8 @@ main h2 {
 }
 
 .video-align {
-    margin-left: 0%;
-    margin-top: 20px;
     flex: 1;
+    margin-top: 20px;
 }
 
 video {
@@ -148,6 +155,7 @@ th, td {
     border: 1px solid #bdc3c7;
     padding: 15px;
     text-align: left;
+    color: #333;
 }
 
 th {
@@ -243,7 +251,7 @@ tr:hover {
     color: rgba(254, 249, 231, 0.6);
 }
 
-/* ==================== DARK THEME ==================== */
+/* ==================== DARK THEME (from script-gallery.js) ==================== */
 
 body.dark-mode {
     background-color: #1A1A1A;
@@ -283,6 +291,10 @@ body.dark-mode #themebtn {
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
+}
+
+body.dark-mode #themebtn:hover {
+    background-color: #C9A877;
 }
 
 body.dark-mode .heading,
@@ -347,6 +359,10 @@ body.dark-mode .map-text {
     color: #FEF9E7;
 }
 
+body.dark-mode .video-description h3 {
+    color: #D4AF37;
+}
+
 body.dark-mode table {
     width: 90%;
     margin: 40px auto;
@@ -394,7 +410,9 @@ body.dark-mode .footer-grid h3 {
     font-size: 0.95rem;
 }
 
-body.dark-mode .footer-grid p {
+body.dark-mode .footer-grid p,
+body.dark-mode .footer-accessibility p,
+body.dark-mode .footer-employment p {
     font-size: 0.8rem;
     color: #bbb;
     line-height: 1.4;
@@ -405,6 +423,11 @@ body.dark-mode .footer-employment a {
     color: #D4AF37;
     text-decoration: none;
     font-size: 0.8rem;
+}
+
+body.dark-mode .social-links a:hover,
+body.dark-mode .footer-employment a:hover {
+    color: #FEF9E7;
 }
 
 body.dark-mode .footer-bottom {
