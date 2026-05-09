@@ -1,13 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-
 <head>
-
-    
- 
- 
- 
     <title>Contact Us</title>
 
     <link rel="stylesheet" href="contact.css">
@@ -17,10 +10,8 @@
 
 <body>
 <nav>
-        
         <a href="index.html">Home</a>
        <a href="price.html" class="nav-btn">book a ticket</a><!--george file name-->
-	   
         <a href="search.html">collections</a><!--haya file name-->
         <a href="gallery.html">gallery</a><!--haya file name-->
         <a href="about.html">About the museum</a><!--judy file name-->
@@ -32,58 +23,27 @@
 	    <button id="themebtn" onclick="toggleTheme()">Switch Theme</button>
 </nav>
 
-
-
 <section class="container">
-
     <h1>Contact & Feedback</h1>
     <div class="box">
 
         <h2>Contact Us</h2>
-
-        <form>
-
-            <input type="text" placeholder="Your Name">
-
-            <input type="email" placeholder="Your Email">
-            
-
-
-<form onsubmit="return showMessage()">
-
-  <button type="submit">Submit</button>
-</form>
-
-    </div>
-
-    <div class="box">
-
-        <h2>Feedback </h2>
-
-        <form>
-
+      <div class="box">
+    <h2>Contact & Feedback</h2>
+    <form id="museumContactForm">
+        <input type="text" id="userName" placeholder="Your Name">
+        <input type="text" id="userEmail" placeholder="Your Email">
+        <textarea id="userMessage" placeholder="Your Feedback/Message"></textarea>
         
-<form id="contactForm">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <button type="submit" id="submitBtn">submit</button>
-</form>
-            
-
-          
-
-        </form>
-
-    </div>
-
+        <p id="errorMessage" style="color: red; font-size: 0.8rem; display: none;"></p>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
     <div class="box">
-
         <h2>Our Location</h2>
-
-        <iframe 
-
+        <iframe
             src="https://maps.google.com/maps?q=Grand%20Egyptian%20Museum&t=&z=13&ie=UTF8&iwloc=&output=embed">
-
         </iframe>
 
     </div>
