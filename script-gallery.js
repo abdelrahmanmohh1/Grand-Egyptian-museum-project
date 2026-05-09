@@ -52,22 +52,19 @@ function goToSearch() {
     window.location.href = `search.html?q=${encodeURIComponent(query)}`;
 }
 function toggleFavorite(itemId) {
-    // Get existing favorites or start a new list
+   
     let favorites = JSON.parse(localStorage.getItem('myFavorites')) || [];
 
     if (favorites.includes(itemId)) {
-        // Remove if already there
+       
         favorites = favorites.filter(id => id !== itemId);
         alert("Removed from favorites!");
     } else {
-        // Add to list
+        
         favorites.push(itemId);
         alert("Added to favorites!");
     }
-
-    // Save back to localStorage
     localStorage.setItem('myFavorites', JSON.stringify(favorites));
-    
-    // Optional: Toggle a CSS class for visual feedback
+   
     event.target.classList.toggle('active');
 }
