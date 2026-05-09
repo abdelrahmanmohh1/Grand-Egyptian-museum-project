@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="style-login.css">
+    <meta charset="UTF-8">
+    <title>Sign Up - GEM</title>
+    <link rel="stylesheet" href="style-login.css">
 </head>
-
 <body class="signup-page">
 
-<form onsubmit="validateSignup(event)" id="signupForm">
+    <form onsubmit="validateSignup(event)" id="signupForm">
+        <h1>Sign Up</h1>
 
-<h1>Sign Up</h1>
+        <h5>Full Name</h5>
+        <input type="text" id="fullName" placeholder="Enter Your Name">
 
-<h5>Full Name</h5>
-<input type="text" placeholder="Enter Your Name" required>
+        <h5>Email</h5>
+        <input type="email" id="email" placeholder="Enter Your Email">
 
-<h5>Email</h5>
-<input type="email" id="email" placeholder="Enter Your Email" required>
+        <h5>Password</h5>
+        <input type="password" id="password" placeholder="Enter Your Password">
 
-<h5>Password</h5>
-<input type="password" id="password" placeholder="Enter Your Password" required>
+        <h5>Confirm Password</h5>
+        <input type="password" id="confirmPassword" placeholder="Re-Enter Your Password">
 
-<h5>Confirm Password</h5>
-<input type="password" id="confirmPassword" placeholder="Re-Enter Your Password" required>
+        <button class="signup-btn" type="submit">
+            Create Account
+        </button>
 
-<button class="signup-btn" type="submit">
-Create Account
-</button>
+        <p>
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+    </form>
 
-<p>
-Already have an account ?
-<a href="login.html">Login</a>
-</p>
-
-</form>
-
-<script src="signup.script.js"></script>
-
+    <script src="signup.script.js"></script>
 </body>
 </html>
