@@ -49,7 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-if (localStorage.getItem("loggedIn") !== "true" || !localStorage.getItem("userAccount")) {
-    alert("Please sign up or log in to access the collections!");
-    window.location.href = "login.html";
-}
+
