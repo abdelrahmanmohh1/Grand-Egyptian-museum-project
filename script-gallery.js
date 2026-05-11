@@ -18,7 +18,7 @@ if (themeBtn) {
     });
 }
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Lightbox Setup ---
+   
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lbImg');
     const lbTitle = document.getElementById('lbTitle');
@@ -74,10 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function goToSearch() {
-    const searchInput = document.getElementById('homeSearchInput');
-    if (searchInput) {
-        const query = searchInput.value;
-        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-    }
-}
+
