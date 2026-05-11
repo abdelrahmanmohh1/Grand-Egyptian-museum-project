@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('myFavorites', JSON.stringify(favorites));
         });
     });
-});
+});if (localStorage.getItem("loggedIn") !== "true") {
+  window.location.href = "login.html";
+} 
 
 
